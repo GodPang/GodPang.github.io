@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://GodPang.github.io/"/>
-  <updated>2018-10-14T15:11:18.091Z</updated>
+  <updated>2018-10-16T08:28:35.559Z</updated>
   <id>https://GodPang.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>实验吧——隐写术——欢迎来到地狱</title>
+    <link href="https://GodPang.github.io/2018/10/16/%E5%AE%9E%E9%AA%8C%E5%90%A7%E2%80%94%E2%80%94%E9%9A%90%E5%86%99%E6%9C%AF%E2%80%94%E2%80%94%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%E5%9C%B0%E7%8B%B1/"/>
+    <id>https://GodPang.github.io/2018/10/16/实验吧——隐写术——欢迎来到地狱/</id>
+    <published>2018-10-16T08:26:30.000Z</published>
+    <updated>2018-10-16T08:28:35.559Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="欢迎来到地狱"><a href="#欢迎来到地狱" class="headerlink" title="欢迎来到地狱"></a>欢迎来到地狱</h1><h2 id="一道比较综合的隐写题目"><a href="#一道比较综合的隐写题目" class="headerlink" title="一道比较综合的隐写题目"></a>一道比较综合的隐写题目</h2><p>图片头文件添加，摩斯电码，word隐藏字符查看，图片解密，图片分离，zip字典爆破，base64解码，兔子解码，凯撒密码等<br><a href="http://ctf5.shiyanbar.com/stega/hell/欢迎来到地狱.zip" target="_blank" rel="noopener">题目链接</a></p><ol><li>下载下来是一个压缩包</li><li>解压压缩包后出现三个文件.jpg .zip .docx</li><li>发现图片打开不显示，用winhex打开发现缺少文件头，将jpg的文件头补上</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4jkysg5j30dl06r42h.jpg" alt=""></p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4k7t486j30a309rtco.jpg" alt=""></p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4kjsn97j307003y752.jpg" alt=""></p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4ktwyvuj30di058djs.jpg" alt=""></p><ol start="4"><li>保存后图片可以打开</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4lotv6oj30n903hmzv.jpg" alt=""></p><ol start="5"><li>是一个百度网盘的链接，注意l和1的区别，网盘里是一个音频文件<a href="https://pan.baidu.com/s/1i49Jhlj" target="_blank" rel="noopener">地狱之声</a></li><li>audacity 打开,类似摩斯电码</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4oadtgzj30pq0jnqav.jpg" alt=""></p><blockquote><p>-.-/./-.–/.-.././-/..-/…/–./—</p></blockquote><p>通过<a href="http://www.ip138.com/mosi/" target="_blank" rel="noopener">摩斯电码解密</a>得到：KEYLETUSGO，我们得到得到<strong>第二层地狱</strong>word密码:letusgo(小写有点坑)</p><ol start="7"><li>打开word</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4taow8vj30gm0mltjv.jpg" alt=""></p><ol start="8"><li><p>通过以知信息 图片里有、东西啊。</p></li><li><p>用<a href="http://www.atool.org/steganography.php" target="_blank" rel="noopener">在线解密隐藏信息文件</a>得到：</p></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4wtquu0j30pq098426.jpg" alt=""></p><p>并得到压缩包密码：you are in finally hell now</p><ol start="10"><li>用上面的密码解压压缩包：得到两个文件，一张图和一个文本，文本里面的内容是这样的：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4zk9yqkj30ls03zq49.jpg" alt=""></p><p>一看就是ascii的二进制，8个一组转换一下，就是ruokouling，打开压缩包有一个txt一个图片，txt解码是提示ruokouling(弱口令)，</p><p>怀疑图片不单纯，果然，binwalk一看，还有个压缩包，弱口令，字典打一下，得到密码Password</p><p>解压后是一个txt，打开有一段密码</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa51epc06j30fh04lt95.jpg" alt=""></p><blockquote><p>VTJGc2RHVmtYMTlwRG9yWjJoVFArNXcwelNBOWJYaFZlekp5MnVtRlRTcDZQZE42elBLQ01BPT0=</p></blockquote><ol start="11"><li>胜利就在眼前，贝斯意思是base64，还有一个兔子洞穴，意思是rabbit，名门望族指的是凯撒，最后把这个字符串经过base64-&gt;rabbit-&gt;Cesar之后得到flag:<blockquote><p>woshinimendexiaojiejieyo</p></blockquote></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;欢迎来到地狱&quot;&gt;&lt;a href=&quot;#欢迎来到地狱&quot; class=&quot;headerlink&quot; title=&quot;欢迎来到地狱&quot;&gt;&lt;/a&gt;欢迎来到地狱&lt;/h1&gt;&lt;h2 id=&quot;一道比较综合的隐写题目&quot;&gt;&lt;a href=&quot;#一道比较综合的隐写题目&quot; class=&quot;header
+      
+    
+    </summary>
+    
+      <category term="ctf解题笔记" scheme="https://GodPang.github.io/categories/ctf%E8%A7%A3%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="隐写术" scheme="https://GodPang.github.io/tags/%E9%9A%90%E5%86%99%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>下载了一些工具</title>
@@ -42,6 +67,31 @@
   </entry>
   
   <entry>
+    <title>MySQL1</title>
+    <link href="https://GodPang.github.io/2018/10/13/MySQL1/"/>
+    <id>https://GodPang.github.io/2018/10/13/MySQL1/</id>
+    <published>2018-10-13T13:48:40.000Z</published>
+    <updated>2018-10-13T13:53:52.120Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ubuntu安装-VMware-Tools"><a href="#ubuntu安装-VMware-Tools" class="headerlink" title="ubuntu安装 VMware Tools"></a>ubuntu安装 VMware Tools</h1><ol><li>现在再开始进入系统后，在VMware菜单栏找到安装虚拟工具的时候，它会弹出一个文件夹，里面就有VMware Tools的安装包。</li><li>直接把WMwareTools拷贝出来到桌面</li><li>然后打开终端解压<blockquote><p>命令：tar -xzvf  VMwareTools-10.0.6-3595377.tar.gz(注意版本号)</p></blockquote></li><li>进入解压后的目录，执行：sudo ./wmware-install.pl  然后就一直回车了。</li><li>Ubuntu会进行的很顺利，而其他发行版却未必。一直回车到底，到最后提示成功，reboot就可以了。<h1 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h1><h2 id="安装前检查"><a href="#安装前检查" class="headerlink" title="安装前检查"></a>安装前检查</h2></li><li>先要检查Linux系统中是否已经安装了MySQL，输入命令尝试打开MySQL服务：<blockquote><p>sudo service mysql start</p></blockquote></li><li>输入密码后，如果出现以下提示，则说明系统中已经安装有 MySQL：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6gzby33qj30pq04ygpc.jpg" alt=""></p><ol start="3"><li>如果提示是这样的，则说明系统中没有 MySQL，需要继续安装：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6gxuh29cj30fn013t8p.jpg" alt=""></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li>在Ubuntu上安装MySQL，最简单的方式是在线安装。只需要几行简单的命令（ # 号后面是注释）：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#安装 MySQL 服务端、核心程序</span><br><span class="line">sudo apt-get install mysql-server</span><br><span class="line"></span><br><span class="line">#安装 MySQL 客户端</span><br><span class="line">sudo apt-get install mysql-client</span><br></pre></td></tr></table></figure></li></ol><p>在安装过程中会提示确认输入YES，设置 root 用户密码（之后也可以修改）等，稍等片刻便可安装成功。</p><ol start="2"><li>安装结束后，用命令验证是否安装并启动成功：<blockquote><p>sudo netstat -tap | grep mysql<br>如果出现如下提示，则安装成功：</p></blockquote></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hbuzqelj30dq01mwek.jpg" alt=""></p><h2 id="尝试MySQL"><a href="#尝试MySQL" class="headerlink" title="尝试MySQL"></a>尝试MySQL</h2><ol><li>使用如下两条命令，打开MySQL服务并使用root用户登录：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 启动 MySQL 服务</span><br><span class="line">sudo service mysql start             </span><br><span class="line"></span><br><span class="line"># 使用 root 用户登录，实验楼环境的密码为空，直接回车就可以登录</span><br><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></li></ol><p>执行成功会出现如下提示：</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hfqigtpj30hd0agabq.jpg" alt=""></p><ol start="2"><li>使用命令 show databases;，查看有哪些数据库（注意不要漏掉分号 ;）：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hghiu50j3085054jri.jpg" alt=""></p><ol start="3"><li>选择连接其中一个数据库，语句格式为 use &lt;数据库名&gt;，这里可以不用加分号，这里我们选择 information_schema 数据库：<blockquote><p>use information_schema</p></blockquote></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6higs6qij30h802lwem.jpg" alt=""></p><ol start="4"><li>使用命令 show tables; 查看数据库中有哪些表（注意不要漏掉“;”）：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hjns0vpj30ey0ab3zg.jpg" alt=""></p><ol start="5"><li>使用命令 quit 或者 exit 退出 MySQL。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;ubuntu安装-VMware-Tools&quot;&gt;&lt;a href=&quot;#ubuntu安装-VMware-Tools&quot; class=&quot;headerlink&quot; title=&quot;ubuntu安装 VMware Tools&quot;&gt;&lt;/a&gt;ubuntu安装 VMware Tools&lt;/
+      
+    
+    </summary>
+    
+      <category term="MySQL笔记" scheme="https://GodPang.github.io/categories/MySQL%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="MySQL" scheme="https://GodPang.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
     <title>MySQL2</title>
     <link href="https://GodPang.github.io/2018/10/13/MySQL2/"/>
     <id>https://GodPang.github.io/2018/10/13/MySQL2/</id>
@@ -56,31 +106,6 @@
       
         &lt;ol&gt;
 &lt;li&gt;首先，我们创建一个数据库，给它一个名字，比如 mysql_shiyan，以后的几次实验也是对 mysql_shiyan 这个数据库进行操作。 语句格式为 CREATE DATABASE &amp;lt;数据库名字&amp;gt;;，（注意不要漏掉分号 ;），前面的 CREATE
-      
-    
-    </summary>
-    
-      <category term="MySQL笔记" scheme="https://GodPang.github.io/categories/MySQL%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="MySQL" scheme="https://GodPang.github.io/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MySQL1</title>
-    <link href="https://GodPang.github.io/2018/10/13/MySQL1/"/>
-    <id>https://GodPang.github.io/2018/10/13/MySQL1/</id>
-    <published>2018-10-13T13:48:40.000Z</published>
-    <updated>2018-10-13T13:53:52.120Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="ubuntu安装-VMware-Tools"><a href="#ubuntu安装-VMware-Tools" class="headerlink" title="ubuntu安装 VMware Tools"></a>ubuntu安装 VMware Tools</h1><ol><li>现在再开始进入系统后，在VMware菜单栏找到安装虚拟工具的时候，它会弹出一个文件夹，里面就有VMware Tools的安装包。</li><li>直接把WMwareTools拷贝出来到桌面</li><li>然后打开终端解压<blockquote><p>命令：tar -xzvf  VMwareTools-10.0.6-3595377.tar.gz(注意版本号)</p></blockquote></li><li>进入解压后的目录，执行：sudo ./wmware-install.pl  然后就一直回车了。</li><li>Ubuntu会进行的很顺利，而其他发行版却未必。一直回车到底，到最后提示成功，reboot就可以了。<h1 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h1><h2 id="安装前检查"><a href="#安装前检查" class="headerlink" title="安装前检查"></a>安装前检查</h2></li><li>先要检查Linux系统中是否已经安装了MySQL，输入命令尝试打开MySQL服务：<blockquote><p>sudo service mysql start</p></blockquote></li><li>输入密码后，如果出现以下提示，则说明系统中已经安装有 MySQL：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6gzby33qj30pq04ygpc.jpg" alt=""></p><ol start="3"><li>如果提示是这样的，则说明系统中没有 MySQL，需要继续安装：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6gxuh29cj30fn013t8p.jpg" alt=""></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li>在Ubuntu上安装MySQL，最简单的方式是在线安装。只需要几行简单的命令（ # 号后面是注释）：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#安装 MySQL 服务端、核心程序</span><br><span class="line">sudo apt-get install mysql-server</span><br><span class="line"></span><br><span class="line">#安装 MySQL 客户端</span><br><span class="line">sudo apt-get install mysql-client</span><br></pre></td></tr></table></figure></li></ol><p>在安装过程中会提示确认输入YES，设置 root 用户密码（之后也可以修改）等，稍等片刻便可安装成功。</p><ol start="2"><li>安装结束后，用命令验证是否安装并启动成功：<blockquote><p>sudo netstat -tap | grep mysql<br>如果出现如下提示，则安装成功：</p></blockquote></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hbuzqelj30dq01mwek.jpg" alt=""></p><h2 id="尝试MySQL"><a href="#尝试MySQL" class="headerlink" title="尝试MySQL"></a>尝试MySQL</h2><ol><li>使用如下两条命令，打开MySQL服务并使用root用户登录：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 启动 MySQL 服务</span><br><span class="line">sudo service mysql start             </span><br><span class="line"></span><br><span class="line"># 使用 root 用户登录，实验楼环境的密码为空，直接回车就可以登录</span><br><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></li></ol><p>执行成功会出现如下提示：</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hfqigtpj30hd0agabq.jpg" alt=""></p><ol start="2"><li>使用命令 show databases;，查看有哪些数据库（注意不要漏掉分号 ;）：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hghiu50j3085054jri.jpg" alt=""></p><ol start="3"><li>选择连接其中一个数据库，语句格式为 use &lt;数据库名&gt;，这里可以不用加分号，这里我们选择 information_schema 数据库：<blockquote><p>use information_schema</p></blockquote></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6higs6qij30h802lwem.jpg" alt=""></p><ol start="4"><li>使用命令 show tables; 查看数据库中有哪些表（注意不要漏掉“;”）：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hjns0vpj30ey0ab3zg.jpg" alt=""></p><ol start="5"><li>使用命令 quit 或者 exit 退出 MySQL。</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;ubuntu安装-VMware-Tools&quot;&gt;&lt;a href=&quot;#ubuntu安装-VMware-Tools&quot; class=&quot;headerlink&quot; title=&quot;ubuntu安装 VMware Tools&quot;&gt;&lt;/a&gt;ubuntu安装 VMware Tools&lt;/
       
     
     </summary>

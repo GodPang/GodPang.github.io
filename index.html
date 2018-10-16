@@ -266,6 +266,199 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://GodPang.github.io/2018/10/16/实验吧——隐写术——欢迎来到地狱/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GodPang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.赵">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/16/实验吧——隐写术——欢迎来到地狱/" itemprop="url">实验吧——隐写术——欢迎来到地狱</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-16T16:26:30+08:00">
+                2018-10-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/ctf解题笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">ctf解题笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="欢迎来到地狱"><a href="#欢迎来到地狱" class="headerlink" title="欢迎来到地狱"></a>欢迎来到地狱</h1><h2 id="一道比较综合的隐写题目"><a href="#一道比较综合的隐写题目" class="headerlink" title="一道比较综合的隐写题目"></a>一道比较综合的隐写题目</h2><p>图片头文件添加，摩斯电码，word隐藏字符查看，图片解密，图片分离，zip字典爆破，base64解码，兔子解码，凯撒密码等<br><a href="http://ctf5.shiyanbar.com/stega/hell/欢迎来到地狱.zip" target="_blank" rel="noopener">题目链接</a></p>
+<ol>
+<li>下载下来是一个压缩包</li>
+<li>解压压缩包后出现三个文件.jpg .zip .docx</li>
+<li>发现图片打开不显示，用winhex打开发现缺少文件头，将jpg的文件头补上</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4jkysg5j30dl06r42h.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4k7t486j30a309rtco.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4kjsn97j307003y752.jpg" alt=""></p>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4ktwyvuj30di058djs.jpg" alt=""></p>
+<ol start="4">
+<li>保存后图片可以打开</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4lotv6oj30n903hmzv.jpg" alt=""></p>
+<ol start="5">
+<li>是一个百度网盘的链接，注意l和1的区别，网盘里是一个音频文件<a href="https://pan.baidu.com/s/1i49Jhlj" target="_blank" rel="noopener">地狱之声</a></li>
+<li>audacity 打开,类似摩斯电码</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4oadtgzj30pq0jnqav.jpg" alt=""></p>
+<blockquote>
+<p>-.-/./-.–/.-.././-/..-/…/–./—</p>
+</blockquote>
+<p>通过<a href="http://www.ip138.com/mosi/" target="_blank" rel="noopener">摩斯电码解密</a>得到：KEYLETUSGO，我们得到得到<strong>第二层地狱</strong>word密码:letusgo(小写有点坑)</p>
+<ol start="7">
+<li>打开word</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4taow8vj30gm0mltjv.jpg" alt=""></p>
+<ol start="8">
+<li><p>通过以知信息 图片里有、东西啊。</p>
+</li>
+<li><p>用<a href="http://www.atool.org/steganography.php" target="_blank" rel="noopener">在线解密隐藏信息文件</a>得到：</p>
+</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4wtquu0j30pq098426.jpg" alt=""></p>
+<p>并得到压缩包密码：you are in finally hell now</p>
+<ol start="10">
+<li>用上面的密码解压压缩包：得到两个文件，一张图和一个文本，文本里面的内容是这样的：</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa4zk9yqkj30ls03zq49.jpg" alt=""></p>
+<p>一看就是ascii的二进制，8个一组转换一下，就是ruokouling，打开压缩包有一个txt一个图片，txt解码是提示ruokouling(弱口令)，</p>
+<p>怀疑图片不单纯，果然，binwalk一看，还有个压缩包，弱口令，字典打一下，得到密码Password</p>
+<p>解压后是一个txt，打开有一段密码</p>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwa51epc06j30fh04lt95.jpg" alt=""></p>
+<blockquote>
+<p>VTJGc2RHVmtYMTlwRG9yWjJoVFArNXcwelNBOWJYaFZlekp5MnVtRlRTcDZQZE42elBLQ01BPT0=</p>
+</blockquote>
+<ol start="11">
+<li>胜利就在眼前，贝斯意思是base64，还有一个兔子洞穴，意思是rabbit，名门望族指的是凯撒，最后把这个字符串经过base64-&gt;rabbit-&gt;Cesar之后得到flag:<blockquote>
+<p>woshinimendexiaojiejieyo</p>
+</blockquote>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://GodPang.github.io/2018/10/14/下载了一些工具/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -364,191 +557,6 @@
 <p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw85cpbeowj311o0kojw7.jpg" alt=""></p>
 <p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw85cxvpywj30td0l3dkb.jpg" alt=""></p>
 <h2 id="然后今天社团第一次上课去的人很多，该给一些学习资料了。顺便清理下人员"><a href="#然后今天社团第一次上课去的人很多，该给一些学习资料了。顺便清理下人员" class="headerlink" title="然后今天社团第一次上课去的人很多，该给一些学习资料了。顺便清理下人员"></a>然后今天社团第一次上课去的人很多，该给一些学习资料了。顺便清理下人员</h2><h2 id="要讨论干事纳新问题"><a href="#要讨论干事纳新问题" class="headerlink" title="要讨论干事纳新问题"></a>要讨论干事纳新问题</h2><h2 id="报名了大数据比赛"><a href="#报名了大数据比赛" class="headerlink" title="报名了大数据比赛"></a>报名了大数据比赛</h2><h2 id="明天满课-报完名就睡觉"><a href="#明天满课-报完名就睡觉" class="headerlink" title="明天满课,报完名就睡觉"></a>明天满课,报完名就睡觉</h2><h2 id="要报名蓝盾杯了"><a href="#要报名蓝盾杯了" class="headerlink" title="要报名蓝盾杯了"></a>要报名蓝盾杯了</h2><h2 id="可能10-25到11-10号都在不了学校了。潍坊，北京，淄博。"><a href="#可能10-25到11-10号都在不了学校了。潍坊，北京，淄博。" class="headerlink" title="可能10.25到11.10号都在不了学校了。潍坊，北京，淄博。"></a>可能10.25到11.10号都在不了学校了。潍坊，北京，淄博。</h2><h2 id="今天好像没学什么东西。MySQL学习遇到了瓶颈，mooc上的课程没忘了做，不过都是搜索的答案，差评。"><a href="#今天好像没学什么东西。MySQL学习遇到了瓶颈，mooc上的课程没忘了做，不过都是搜索的答案，差评。" class="headerlink" title="今天好像没学什么东西。MySQL学习遇到了瓶颈，mooc上的课程没忘了做，不过都是搜索的答案，差评。"></a>今天好像没学什么东西。MySQL学习遇到了瓶颈，mooc上的课程没忘了做，不过都是搜索的答案，差评。</h2><h2 id="嘤嘤嘤，学习好难，我不想努力了，我想找个小富婆包养我，哈哈哈。"><a href="#嘤嘤嘤，学习好难，我不想努力了，我想找个小富婆包养我，哈哈哈。" class="headerlink" title="嘤嘤嘤，学习好难，我不想努力了，我想找个小富婆包养我，哈哈哈。"></a>嘤嘤嘤，学习好难，我不想努力了，我想找个小富婆包养我，哈哈哈。</h2><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw85mntgq9j30qo0jymzu.jpg" alt=""></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://GodPang.github.io/2018/10/13/MySQL2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="GodPang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mr.赵">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/13/MySQL2/" itemprop="url">MySQL2</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-13T21:48:40+08:00">
-                2018-10-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MySQL笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">MySQL笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li>首先，我们创建一个数据库，给它一个名字，比如 mysql_shiyan，以后的几次实验也是对 mysql_shiyan 这个数据库进行操作。 语句格式为 CREATE DATABASE &lt;数据库名字&gt;;，（注意不要漏掉分号 ;），前面的 CREATE DATABASE 也可以使用小写，具体命令为：<blockquote>
-<p>CREATE DATABASE mysql_shiyan;</p>
-</blockquote>
-</li>
-</ol>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6iita7quj30c00760t4.jpg" alt=""></p>
-<p>在大多数系统中，SQL 语句都是不区分大小写的，因此以下语句都是合法的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE name1;</span><br><span class="line">create database name2;</span><br><span class="line">CREATE database name3;</span><br><span class="line">create DAtabaSE name4;</span><br></pre></td></tr></table></figure></p>
-<ol start="2">
-<li>接下来的操作，就在刚才创建的 mysql_shiyan 中进行，首先要连接数据库，使用语句 use &lt;数据库名字&gt;：<blockquote>
-<p>use mysql_shiyan</p>
-</blockquote>
-</li>
-</ol>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6ilijafuj306e01lwec.jpg" alt=""></p>
-<p>输入命令 show tables; 可以查看当前数据库里有几张表，现在mysql_shiyan 里还是空的：</p>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6in752wvj307n02uwej.jpg" alt=""></p>
-<ol start="3">
-<li>一个数据库中一般会有多张表;在数据库中新建一张表的语句格式为：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE 表的名字</span><br><span class="line">(</span><br><span class="line">列名a 数据类型(数据长度),</span><br><span class="line">列名b 数据类型(数据长度)，</span><br><span class="line">列名c 数据类型(数据长度)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>我们尝试在 mysql_shiyan 中新建一张表 employee，包含姓名，ID 和电话信息，所以语句为：</p>
-<blockquote>
-<p>CREATE TABLE employee (id int(10),name char(20),phone int(12));</p>
-</blockquote>
-<p>然后再创建一张表 department，包含名称和电话信息，想让命令看起来更整洁，你可以这样输入命令：</p>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6itlb43vj30af03v3yo.jpg" alt=""></p>
-<p>这时候再 show tables;<br>一下，可以看到刚才添加的两张表</p>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6iwhceu0j309a04e3ym.jpg" alt=""></p>
-<ol start="4">
-<li>刚才我们新建了两张表，使用语句 SELECT * FROM employee; 查看表中的内容，可以看到 employee 表中现在还是空的：</li>
-</ol>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6izts7vbj308r024jrb.jpg" alt=""></p>
-<p>我们通过 INSERT 语句向表中插入数据，语句格式为：</p>
-<blockquote>
-<p>INSERT INTO 表的名字(列名a,列名b,列名c) VALUES(值1,值2,值3);</p>
-</blockquote>
-<p>我们尝试向 employee 中加入 Tom、Jack 和 Rose：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO employee(id,name,phone) VALUES(01,&apos;Tom&apos;,110110110);</span><br><span class="line"></span><br><span class="line">INSERT INTO employee VALUES(02,&apos;Jack&apos;,119119119);</span><br><span class="line"></span><br><span class="line">INSERT INTO employee(id,name) VALUES(03,&apos;Rose&apos;);</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6j8vdcn3j308p04pwel.jpg" alt=""></p>
-<p>删除一条记录，命令如下：</p>
-<blockquote>
-<p>delete from employee(表名) where id（列名） = ‘2（元素名称）’;</p>
-</blockquote>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6j8a1l1lj30cd05oglz.jpg" alt=""></p>
 
           
         
@@ -746,6 +754,191 @@
 <ol start="5">
 <li>使用命令 quit 或者 exit 退出 MySQL。</li>
 </ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://GodPang.github.io/2018/10/13/MySQL2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GodPang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.赵">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/13/MySQL2/" itemprop="url">MySQL2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-13T21:48:40+08:00">
+                2018-10-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>首先，我们创建一个数据库，给它一个名字，比如 mysql_shiyan，以后的几次实验也是对 mysql_shiyan 这个数据库进行操作。 语句格式为 CREATE DATABASE &lt;数据库名字&gt;;，（注意不要漏掉分号 ;），前面的 CREATE DATABASE 也可以使用小写，具体命令为：<blockquote>
+<p>CREATE DATABASE mysql_shiyan;</p>
+</blockquote>
+</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6iita7quj30c00760t4.jpg" alt=""></p>
+<p>在大多数系统中，SQL 语句都是不区分大小写的，因此以下语句都是合法的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE name1;</span><br><span class="line">create database name2;</span><br><span class="line">CREATE database name3;</span><br><span class="line">create DAtabaSE name4;</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li>接下来的操作，就在刚才创建的 mysql_shiyan 中进行，首先要连接数据库，使用语句 use &lt;数据库名字&gt;：<blockquote>
+<p>use mysql_shiyan</p>
+</blockquote>
+</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6ilijafuj306e01lwec.jpg" alt=""></p>
+<p>输入命令 show tables; 可以查看当前数据库里有几张表，现在mysql_shiyan 里还是空的：</p>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6in752wvj307n02uwej.jpg" alt=""></p>
+<ol start="3">
+<li>一个数据库中一般会有多张表;在数据库中新建一张表的语句格式为：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE 表的名字</span><br><span class="line">(</span><br><span class="line">列名a 数据类型(数据长度),</span><br><span class="line">列名b 数据类型(数据长度)，</span><br><span class="line">列名c 数据类型(数据长度)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>我们尝试在 mysql_shiyan 中新建一张表 employee，包含姓名，ID 和电话信息，所以语句为：</p>
+<blockquote>
+<p>CREATE TABLE employee (id int(10),name char(20),phone int(12));</p>
+</blockquote>
+<p>然后再创建一张表 department，包含名称和电话信息，想让命令看起来更整洁，你可以这样输入命令：</p>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6itlb43vj30af03v3yo.jpg" alt=""></p>
+<p>这时候再 show tables;<br>一下，可以看到刚才添加的两张表</p>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6iwhceu0j309a04e3ym.jpg" alt=""></p>
+<ol start="4">
+<li>刚才我们新建了两张表，使用语句 SELECT * FROM employee; 查看表中的内容，可以看到 employee 表中现在还是空的：</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6izts7vbj308r024jrb.jpg" alt=""></p>
+<p>我们通过 INSERT 语句向表中插入数据，语句格式为：</p>
+<blockquote>
+<p>INSERT INTO 表的名字(列名a,列名b,列名c) VALUES(值1,值2,值3);</p>
+</blockquote>
+<p>我们尝试向 employee 中加入 Tom、Jack 和 Rose：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO employee(id,name,phone) VALUES(01,&apos;Tom&apos;,110110110);</span><br><span class="line"></span><br><span class="line">INSERT INTO employee VALUES(02,&apos;Jack&apos;,119119119);</span><br><span class="line"></span><br><span class="line">INSERT INTO employee(id,name) VALUES(03,&apos;Rose&apos;);</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6j8vdcn3j308p04pwel.jpg" alt=""></p>
+<p>删除一条记录，命令如下：</p>
+<blockquote>
+<p>delete from employee(表名) where id（列名） = ‘2（元素名称）’;</p>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6j8a1l1lj30cd05oglz.jpg" alt=""></p>
 
           
         
@@ -2244,7 +2437,7 @@ S + 'xyz'
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -2255,7 +2448,7 @@ S + 'xyz'
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -2266,7 +2459,7 @@ S + 'xyz'
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
