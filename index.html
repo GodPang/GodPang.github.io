@@ -266,6 +266,253 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://GodPang.github.io/2018/10/22/MySQL3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GodPang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.赵">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/22/MySQL3/" itemprop="url">MySQL3</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-22T22:16:12+08:00">
+                2018-10-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><ol>
+<li>通过create databsae 语句创建数据库<blockquote>
+<p>create database 数据库名； </p>
+</blockquote>
+</li>
+<li>通过create schema 语句创建数据库<blockquote>
+<p>create schema 数据库名；</p>
+</blockquote>
+</li>
+<li><p>创建指定字符集的数据库</p>
+<blockquote>
+<p>create database 数据库名<br>-&gt; character set = gbk;  <strong>默认utf-8</strong></p>
+</blockquote>
+</li>
+<li><p>创建数据库时判断是否存在同名数据库</p>
+<blockquote>
+<p>create dateabase if not exists 数据库名;</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="查看使用数据库"><a href="#查看使用数据库" class="headerlink" title="查看使用数据库"></a>查看使用数据库</h2><ol>
+<li>查看数据库<blockquote>
+<p>show databases;</p>
+</blockquote>
+</li>
+<li>使用数据库<blockquote>
+<p>use 数据库名；</p>
+</blockquote>
+<h2 id="修改删除数据库"><a href="#修改删除数据库" class="headerlink" title="修改删除数据库"></a>修改删除数据库</h2></li>
+<li>修改数据库中相关参数</li>
+</ol>
+<blockquote>
+<p> alter database 数据库名<br>-&gt;    default character set gbk <strong>修改字符集为gbk</strong><br>-&gt;    default collate gbk_chinese_ci <strong>;</strong> <strong>修改字符的校对规则为简体中文</strong></p>
+</blockquote>
+<ol start="2">
+<li>删除数据库/表<blockquote>
+<p>drop database 数据库名 ;</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>drop table 表名；</p>
+</blockquote>
+<h2 id="对表的一些操作"><a href="#对表的一些操作" class="headerlink" title="对表的一些操作"></a>对表的一些操作</h2><ol>
+<li>在数据库中创建表<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create table 表名（</span><br><span class="line">列名 参数，</span><br><span class="line">列名 参数，</span><br><span class="line">。。。</span><br><span class="line">）；</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>查看表结构 <code>desc 表名</code></p>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwhbma78p3j30j10drjtf.jpg" alt=""></p>
+<ol start="2">
+<li>一些常用的参数</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">参数</th>
+<th style="text-align:center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">not null</td>
+<td style="text-align:center">非空</td>
+</tr>
+<tr>
+<td style="text-align:center">default xx</td>
+<td style="text-align:center">表示默认值</td>
+</tr>
+<tr>
+<td style="text-align:center">auto_increment</td>
+<td style="text-align:center">自动编号</td>
+</tr>
+<tr>
+<td style="text-align:center">primary key</td>
+<td style="text-align:center">是否为主键</td>
+</tr>
+<tr>
+<td style="text-align:center">reference_definition</td>
+<td style="text-align:center">添加注释</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>复制表结构</li>
+</ol>
+<p>I 只复制表结构</p>
+<blockquote>
+<p>create table 新表名 like 原表名；</p>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwhc1pml6tj30j501kdfu.jpg" alt=""></p>
+<p>II 复制表时并复制内容</p>
+<p><code>create table 新表名 as select * from 原表名</code></p>
+<p>III 同时复制表结构与内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">create table 新表名 like 原表名；</span><br><span class="line">insert into 新表名 select*from 原表名；</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>更改表的存储引擎更改为MyISAM类型。</li>
+</ol>
+<p><code>alter table 表名 engine = myisam;</code></p>
+<ol start="5">
+<li>使用命令行将表中的某一列删除</li>
+</ol>
+<p><code>alter table 表名 drop column 列名；</code></p>
+<ol start="6">
+<li>将Sex列的默认值修改为男(1)</li>
+</ol>
+<p><code>alter table 表名 alter sex set default 1;</code></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://GodPang.github.io/2018/10/16/实验吧——隐写术——欢迎来到地狱/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -605,6 +852,191 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://GodPang.github.io/2018/10/13/MySQL2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="GodPang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Mr.赵">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/10/13/MySQL2/" itemprop="url">MySQL2</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-13T21:48:40+08:00">
+                2018-10-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/MySQL笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">MySQL笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>首先，我们创建一个数据库，给它一个名字，比如 mysql_shiyan，以后的几次实验也是对 mysql_shiyan 这个数据库进行操作。 语句格式为 CREATE DATABASE &lt;数据库名字&gt;;，（注意不要漏掉分号 ;），前面的 CREATE DATABASE 也可以使用小写，具体命令为：<blockquote>
+<p>CREATE DATABASE mysql_shiyan;</p>
+</blockquote>
+</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6iita7quj30c00760t4.jpg" alt=""></p>
+<p>在大多数系统中，SQL 语句都是不区分大小写的，因此以下语句都是合法的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE name1;</span><br><span class="line">create database name2;</span><br><span class="line">CREATE database name3;</span><br><span class="line">create DAtabaSE name4;</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li>接下来的操作，就在刚才创建的 mysql_shiyan 中进行，首先要连接数据库，使用语句 use &lt;数据库名字&gt;：<blockquote>
+<p>use mysql_shiyan</p>
+</blockquote>
+</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6ilijafuj306e01lwec.jpg" alt=""></p>
+<p>输入命令 show tables; 可以查看当前数据库里有几张表，现在mysql_shiyan 里还是空的：</p>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6in752wvj307n02uwej.jpg" alt=""></p>
+<ol start="3">
+<li>一个数据库中一般会有多张表;在数据库中新建一张表的语句格式为：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE 表的名字</span><br><span class="line">(</span><br><span class="line">列名a 数据类型(数据长度),</span><br><span class="line">列名b 数据类型(数据长度)，</span><br><span class="line">列名c 数据类型(数据长度)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>我们尝试在 mysql_shiyan 中新建一张表 employee，包含姓名，ID 和电话信息，所以语句为：</p>
+<blockquote>
+<p>CREATE TABLE employee (id int(10),name char(20),phone int(12));</p>
+</blockquote>
+<p>然后再创建一张表 department，包含名称和电话信息，想让命令看起来更整洁，你可以这样输入命令：</p>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6itlb43vj30af03v3yo.jpg" alt=""></p>
+<p>这时候再 show tables;<br>一下，可以看到刚才添加的两张表</p>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6iwhceu0j309a04e3ym.jpg" alt=""></p>
+<ol start="4">
+<li>刚才我们新建了两张表，使用语句 SELECT * FROM employee; 查看表中的内容，可以看到 employee 表中现在还是空的：</li>
+</ol>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6izts7vbj308r024jrb.jpg" alt=""></p>
+<p>我们通过 INSERT 语句向表中插入数据，语句格式为：</p>
+<blockquote>
+<p>INSERT INTO 表的名字(列名a,列名b,列名c) VALUES(值1,值2,值3);</p>
+</blockquote>
+<p>我们尝试向 employee 中加入 Tom、Jack 和 Rose：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO employee(id,name,phone) VALUES(01,&apos;Tom&apos;,110110110);</span><br><span class="line"></span><br><span class="line">INSERT INTO employee VALUES(02,&apos;Jack&apos;,119119119);</span><br><span class="line"></span><br><span class="line">INSERT INTO employee(id,name) VALUES(03,&apos;Rose&apos;);</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6j8vdcn3j308p04pwel.jpg" alt=""></p>
+<p>删除一条记录，命令如下：</p>
+<blockquote>
+<p>delete from employee(表名) where id（列名） = ‘2（元素名称）’;</p>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6j8a1l1lj30cd05oglz.jpg" alt=""></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://GodPang.github.io/2018/10/13/MySQL1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -754,191 +1186,6 @@
 <ol start="5">
 <li>使用命令 quit 或者 exit 退出 MySQL。</li>
 </ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://GodPang.github.io/2018/10/13/MySQL2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="GodPang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Mr.赵">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/13/MySQL2/" itemprop="url">MySQL2</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-10-13T21:48:40+08:00">
-                2018-10-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/MySQL笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">MySQL笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <ol>
-<li>首先，我们创建一个数据库，给它一个名字，比如 mysql_shiyan，以后的几次实验也是对 mysql_shiyan 这个数据库进行操作。 语句格式为 CREATE DATABASE &lt;数据库名字&gt;;，（注意不要漏掉分号 ;），前面的 CREATE DATABASE 也可以使用小写，具体命令为：<blockquote>
-<p>CREATE DATABASE mysql_shiyan;</p>
-</blockquote>
-</li>
-</ol>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6iita7quj30c00760t4.jpg" alt=""></p>
-<p>在大多数系统中，SQL 语句都是不区分大小写的，因此以下语句都是合法的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE name1;</span><br><span class="line">create database name2;</span><br><span class="line">CREATE database name3;</span><br><span class="line">create DAtabaSE name4;</span><br></pre></td></tr></table></figure></p>
-<ol start="2">
-<li>接下来的操作，就在刚才创建的 mysql_shiyan 中进行，首先要连接数据库，使用语句 use &lt;数据库名字&gt;：<blockquote>
-<p>use mysql_shiyan</p>
-</blockquote>
-</li>
-</ol>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6ilijafuj306e01lwec.jpg" alt=""></p>
-<p>输入命令 show tables; 可以查看当前数据库里有几张表，现在mysql_shiyan 里还是空的：</p>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6in752wvj307n02uwej.jpg" alt=""></p>
-<ol start="3">
-<li>一个数据库中一般会有多张表;在数据库中新建一张表的语句格式为：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE 表的名字</span><br><span class="line">(</span><br><span class="line">列名a 数据类型(数据长度),</span><br><span class="line">列名b 数据类型(数据长度)，</span><br><span class="line">列名c 数据类型(数据长度)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>我们尝试在 mysql_shiyan 中新建一张表 employee，包含姓名，ID 和电话信息，所以语句为：</p>
-<blockquote>
-<p>CREATE TABLE employee (id int(10),name char(20),phone int(12));</p>
-</blockquote>
-<p>然后再创建一张表 department，包含名称和电话信息，想让命令看起来更整洁，你可以这样输入命令：</p>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6itlb43vj30af03v3yo.jpg" alt=""></p>
-<p>这时候再 show tables;<br>一下，可以看到刚才添加的两张表</p>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6iwhceu0j309a04e3ym.jpg" alt=""></p>
-<ol start="4">
-<li>刚才我们新建了两张表，使用语句 SELECT * FROM employee; 查看表中的内容，可以看到 employee 表中现在还是空的：</li>
-</ol>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6izts7vbj308r024jrb.jpg" alt=""></p>
-<p>我们通过 INSERT 语句向表中插入数据，语句格式为：</p>
-<blockquote>
-<p>INSERT INTO 表的名字(列名a,列名b,列名c) VALUES(值1,值2,值3);</p>
-</blockquote>
-<p>我们尝试向 employee 中加入 Tom、Jack 和 Rose：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO employee(id,name,phone) VALUES(01,&apos;Tom&apos;,110110110);</span><br><span class="line"></span><br><span class="line">INSERT INTO employee VALUES(02,&apos;Jack&apos;,119119119);</span><br><span class="line"></span><br><span class="line">INSERT INTO employee(id,name) VALUES(03,&apos;Rose&apos;);</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6j8vdcn3j308p04pwel.jpg" alt=""></p>
-<p>删除一条记录，命令如下：</p>
-<blockquote>
-<p>delete from employee(表名) where id（列名） = ‘2（元素名称）’;</p>
-</blockquote>
-<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6j8a1l1lj30cd05oglz.jpg" alt=""></p>
 
           
         
@@ -2437,7 +2684,7 @@ S + 'xyz'
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>

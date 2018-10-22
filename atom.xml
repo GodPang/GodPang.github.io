@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://GodPang.github.io/"/>
-  <updated>2018-10-16T08:28:35.559Z</updated>
+  <updated>2018-10-22T14:19:29.150Z</updated>
   <id>https://GodPang.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL3</title>
+    <link href="https://GodPang.github.io/2018/10/22/MySQL3/"/>
+    <id>https://GodPang.github.io/2018/10/22/MySQL3/</id>
+    <published>2018-10-22T14:16:12.000Z</published>
+    <updated>2018-10-22T14:19:29.150Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><ol><li>通过create databsae 语句创建数据库<blockquote><p>create database 数据库名； </p></blockquote></li><li>通过create schema 语句创建数据库<blockquote><p>create schema 数据库名；</p></blockquote></li><li><p>创建指定字符集的数据库</p><blockquote><p>create database 数据库名<br>-&gt; character set = gbk;  <strong>默认utf-8</strong></p></blockquote></li><li><p>创建数据库时判断是否存在同名数据库</p><blockquote><p>create dateabase if not exists 数据库名;</p></blockquote></li></ol><h2 id="查看使用数据库"><a href="#查看使用数据库" class="headerlink" title="查看使用数据库"></a>查看使用数据库</h2><ol><li>查看数据库<blockquote><p>show databases;</p></blockquote></li><li>使用数据库<blockquote><p>use 数据库名；</p></blockquote><h2 id="修改删除数据库"><a href="#修改删除数据库" class="headerlink" title="修改删除数据库"></a>修改删除数据库</h2></li><li>修改数据库中相关参数</li></ol><blockquote><p> alter database 数据库名<br>-&gt;    default character set gbk <strong>修改字符集为gbk</strong><br>-&gt;    default collate gbk_chinese_ci <strong>;</strong> <strong>修改字符的校对规则为简体中文</strong></p></blockquote><ol start="2"><li>删除数据库/表<blockquote><p>drop database 数据库名 ;</p></blockquote></li></ol><blockquote><p>drop table 表名；</p></blockquote><h2 id="对表的一些操作"><a href="#对表的一些操作" class="headerlink" title="对表的一些操作"></a>对表的一些操作</h2><ol><li>在数据库中创建表<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">create table 表名（</span><br><span class="line">列名 参数，</span><br><span class="line">列名 参数，</span><br><span class="line">。。。</span><br><span class="line">）；</span><br></pre></td></tr></table></figure></li></ol><p>查看表结构 <code>desc 表名</code></p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwhbma78p3j30j10drjtf.jpg" alt=""></p><ol start="2"><li>一些常用的参数</li></ol><table><thead><tr><th style="text-align:center">参数</th><th style="text-align:center">说明</th></tr></thead><tbody><tr><td style="text-align:center">not null</td><td style="text-align:center">非空</td></tr><tr><td style="text-align:center">default xx</td><td style="text-align:center">表示默认值</td></tr><tr><td style="text-align:center">auto_increment</td><td style="text-align:center">自动编号</td></tr><tr><td style="text-align:center">primary key</td><td style="text-align:center">是否为主键</td></tr><tr><td style="text-align:center">reference_definition</td><td style="text-align:center">添加注释</td></tr></tbody></table><ol start="3"><li>复制表结构</li></ol><p>I 只复制表结构</p><blockquote><p>create table 新表名 like 原表名；</p></blockquote><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwhc1pml6tj30j501kdfu.jpg" alt=""></p><p>II 复制表时并复制内容</p><p><code>create table 新表名 as select * from 原表名</code></p><p>III 同时复制表结构与内容</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">create table 新表名 like 原表名；</span><br><span class="line">insert into 新表名 select*from 原表名；</span><br></pre></td></tr></table></figure><ol start="4"><li>更改表的存储引擎更改为MyISAM类型。</li></ol><p><code>alter table 表名 engine = myisam;</code></p><ol start="5"><li>使用命令行将表中的某一列删除</li></ol><p><code>alter table 表名 drop column 列名；</code></p><ol start="6"><li>将Sex列的默认值修改为男(1)</li></ol><p><code>alter table 表名 alter sex set default 1;</code></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;创建数据库&quot;&gt;&lt;a href=&quot;#创建数据库&quot; class=&quot;headerlink&quot; title=&quot;创建数据库&quot;&gt;&lt;/a&gt;创建数据库&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;通过create databsae 语句创建数据库&lt;blockquote&gt;
+&lt;p&gt;create data
+      
+    
+    </summary>
+    
+      <category term="MySQL笔记" scheme="https://GodPang.github.io/categories/MySQL%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="MySQL" scheme="https://GodPang.github.io/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>实验吧——隐写术——欢迎来到地狱</title>
@@ -67,31 +94,6 @@
   </entry>
   
   <entry>
-    <title>MySQL1</title>
-    <link href="https://GodPang.github.io/2018/10/13/MySQL1/"/>
-    <id>https://GodPang.github.io/2018/10/13/MySQL1/</id>
-    <published>2018-10-13T13:48:40.000Z</published>
-    <updated>2018-10-13T13:53:52.120Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="ubuntu安装-VMware-Tools"><a href="#ubuntu安装-VMware-Tools" class="headerlink" title="ubuntu安装 VMware Tools"></a>ubuntu安装 VMware Tools</h1><ol><li>现在再开始进入系统后，在VMware菜单栏找到安装虚拟工具的时候，它会弹出一个文件夹，里面就有VMware Tools的安装包。</li><li>直接把WMwareTools拷贝出来到桌面</li><li>然后打开终端解压<blockquote><p>命令：tar -xzvf  VMwareTools-10.0.6-3595377.tar.gz(注意版本号)</p></blockquote></li><li>进入解压后的目录，执行：sudo ./wmware-install.pl  然后就一直回车了。</li><li>Ubuntu会进行的很顺利，而其他发行版却未必。一直回车到底，到最后提示成功，reboot就可以了。<h1 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h1><h2 id="安装前检查"><a href="#安装前检查" class="headerlink" title="安装前检查"></a>安装前检查</h2></li><li>先要检查Linux系统中是否已经安装了MySQL，输入命令尝试打开MySQL服务：<blockquote><p>sudo service mysql start</p></blockquote></li><li>输入密码后，如果出现以下提示，则说明系统中已经安装有 MySQL：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6gzby33qj30pq04ygpc.jpg" alt=""></p><ol start="3"><li>如果提示是这样的，则说明系统中没有 MySQL，需要继续安装：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6gxuh29cj30fn013t8p.jpg" alt=""></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li>在Ubuntu上安装MySQL，最简单的方式是在线安装。只需要几行简单的命令（ # 号后面是注释）：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#安装 MySQL 服务端、核心程序</span><br><span class="line">sudo apt-get install mysql-server</span><br><span class="line"></span><br><span class="line">#安装 MySQL 客户端</span><br><span class="line">sudo apt-get install mysql-client</span><br></pre></td></tr></table></figure></li></ol><p>在安装过程中会提示确认输入YES，设置 root 用户密码（之后也可以修改）等，稍等片刻便可安装成功。</p><ol start="2"><li>安装结束后，用命令验证是否安装并启动成功：<blockquote><p>sudo netstat -tap | grep mysql<br>如果出现如下提示，则安装成功：</p></blockquote></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hbuzqelj30dq01mwek.jpg" alt=""></p><h2 id="尝试MySQL"><a href="#尝试MySQL" class="headerlink" title="尝试MySQL"></a>尝试MySQL</h2><ol><li>使用如下两条命令，打开MySQL服务并使用root用户登录：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 启动 MySQL 服务</span><br><span class="line">sudo service mysql start             </span><br><span class="line"></span><br><span class="line"># 使用 root 用户登录，实验楼环境的密码为空，直接回车就可以登录</span><br><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></li></ol><p>执行成功会出现如下提示：</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hfqigtpj30hd0agabq.jpg" alt=""></p><ol start="2"><li>使用命令 show databases;，查看有哪些数据库（注意不要漏掉分号 ;）：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hghiu50j3085054jri.jpg" alt=""></p><ol start="3"><li>选择连接其中一个数据库，语句格式为 use &lt;数据库名&gt;，这里可以不用加分号，这里我们选择 information_schema 数据库：<blockquote><p>use information_schema</p></blockquote></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6higs6qij30h802lwem.jpg" alt=""></p><ol start="4"><li>使用命令 show tables; 查看数据库中有哪些表（注意不要漏掉“;”）：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hjns0vpj30ey0ab3zg.jpg" alt=""></p><ol start="5"><li>使用命令 quit 或者 exit 退出 MySQL。</li></ol>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;ubuntu安装-VMware-Tools&quot;&gt;&lt;a href=&quot;#ubuntu安装-VMware-Tools&quot; class=&quot;headerlink&quot; title=&quot;ubuntu安装 VMware Tools&quot;&gt;&lt;/a&gt;ubuntu安装 VMware Tools&lt;/
-      
-    
-    </summary>
-    
-      <category term="MySQL笔记" scheme="https://GodPang.github.io/categories/MySQL%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="MySQL" scheme="https://GodPang.github.io/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
     <title>MySQL2</title>
     <link href="https://GodPang.github.io/2018/10/13/MySQL2/"/>
     <id>https://GodPang.github.io/2018/10/13/MySQL2/</id>
@@ -106,6 +108,31 @@
       
         &lt;ol&gt;
 &lt;li&gt;首先，我们创建一个数据库，给它一个名字，比如 mysql_shiyan，以后的几次实验也是对 mysql_shiyan 这个数据库进行操作。 语句格式为 CREATE DATABASE &amp;lt;数据库名字&amp;gt;;，（注意不要漏掉分号 ;），前面的 CREATE
+      
+    
+    </summary>
+    
+      <category term="MySQL笔记" scheme="https://GodPang.github.io/categories/MySQL%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="MySQL" scheme="https://GodPang.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL1</title>
+    <link href="https://GodPang.github.io/2018/10/13/MySQL1/"/>
+    <id>https://GodPang.github.io/2018/10/13/MySQL1/</id>
+    <published>2018-10-13T13:48:40.000Z</published>
+    <updated>2018-10-13T13:53:52.120Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ubuntu安装-VMware-Tools"><a href="#ubuntu安装-VMware-Tools" class="headerlink" title="ubuntu安装 VMware Tools"></a>ubuntu安装 VMware Tools</h1><ol><li>现在再开始进入系统后，在VMware菜单栏找到安装虚拟工具的时候，它会弹出一个文件夹，里面就有VMware Tools的安装包。</li><li>直接把WMwareTools拷贝出来到桌面</li><li>然后打开终端解压<blockquote><p>命令：tar -xzvf  VMwareTools-10.0.6-3595377.tar.gz(注意版本号)</p></blockquote></li><li>进入解压后的目录，执行：sudo ./wmware-install.pl  然后就一直回车了。</li><li>Ubuntu会进行的很顺利，而其他发行版却未必。一直回车到底，到最后提示成功，reboot就可以了。<h1 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h1><h2 id="安装前检查"><a href="#安装前检查" class="headerlink" title="安装前检查"></a>安装前检查</h2></li><li>先要检查Linux系统中是否已经安装了MySQL，输入命令尝试打开MySQL服务：<blockquote><p>sudo service mysql start</p></blockquote></li><li>输入密码后，如果出现以下提示，则说明系统中已经安装有 MySQL：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6gzby33qj30pq04ygpc.jpg" alt=""></p><ol start="3"><li>如果提示是这样的，则说明系统中没有 MySQL，需要继续安装：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6gxuh29cj30fn013t8p.jpg" alt=""></p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ol><li>在Ubuntu上安装MySQL，最简单的方式是在线安装。只需要几行简单的命令（ # 号后面是注释）：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#安装 MySQL 服务端、核心程序</span><br><span class="line">sudo apt-get install mysql-server</span><br><span class="line"></span><br><span class="line">#安装 MySQL 客户端</span><br><span class="line">sudo apt-get install mysql-client</span><br></pre></td></tr></table></figure></li></ol><p>在安装过程中会提示确认输入YES，设置 root 用户密码（之后也可以修改）等，稍等片刻便可安装成功。</p><ol start="2"><li>安装结束后，用命令验证是否安装并启动成功：<blockquote><p>sudo netstat -tap | grep mysql<br>如果出现如下提示，则安装成功：</p></blockquote></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hbuzqelj30dq01mwek.jpg" alt=""></p><h2 id="尝试MySQL"><a href="#尝试MySQL" class="headerlink" title="尝试MySQL"></a>尝试MySQL</h2><ol><li>使用如下两条命令，打开MySQL服务并使用root用户登录：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 启动 MySQL 服务</span><br><span class="line">sudo service mysql start             </span><br><span class="line"></span><br><span class="line"># 使用 root 用户登录，实验楼环境的密码为空，直接回车就可以登录</span><br><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></li></ol><p>执行成功会出现如下提示：</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hfqigtpj30hd0agabq.jpg" alt=""></p><ol start="2"><li>使用命令 show databases;，查看有哪些数据库（注意不要漏掉分号 ;）：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hghiu50j3085054jri.jpg" alt=""></p><ol start="3"><li>选择连接其中一个数据库，语句格式为 use &lt;数据库名&gt;，这里可以不用加分号，这里我们选择 information_schema 数据库：<blockquote><p>use information_schema</p></blockquote></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6higs6qij30h802lwem.jpg" alt=""></p><ol start="4"><li>使用命令 show tables; 查看数据库中有哪些表（注意不要漏掉“;”）：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6hjns0vpj30ey0ab3zg.jpg" alt=""></p><ol start="5"><li>使用命令 quit 或者 exit 退出 MySQL。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;ubuntu安装-VMware-Tools&quot;&gt;&lt;a href=&quot;#ubuntu安装-VMware-Tools&quot; class=&quot;headerlink&quot; title=&quot;ubuntu安装 VMware Tools&quot;&gt;&lt;/a&gt;ubuntu安装 VMware Tools&lt;/
       
     
     </summary>
