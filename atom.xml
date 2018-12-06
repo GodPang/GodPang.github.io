@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://GodPang.github.io/"/>
-  <updated>2018-12-04T15:17:47.093Z</updated>
+  <updated>2018-12-06T05:35:18.061Z</updated>
   <id>https://GodPang.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MySQL4</title>
+    <link href="https://GodPang.github.io/2018/12/06/MySQL4/"/>
+    <id>https://GodPang.github.io/2018/12/06/MySQL4/</id>
+    <published>2018-12-06T05:30:34.000Z</published>
+    <updated>2018-12-06T05:35:18.061Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fxwyrotwozj33y8280e8c.jpg" alt=""><br><a id="more"></a></p><h2 id="用户管理"><a href="#用户管理" class="headerlink" title="用户管理"></a>用户管理</h2><h3 id="用户信息存储位置"><a href="#用户信息存储位置" class="headerlink" title="用户信息存储位置"></a>用户信息存储位置</h3><p>mysql中的用户，都存储在mysql系统的系统数据库“mysql”中。</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fxwycaygzlj30bl031t8z.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006doHETly1fxwyd92si1j30fb02cq44.jpg" alt=""></p><h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><p><code>create user ‘用户名’@’允许登录的位置(ip)’ identified by ‘密码’</code></p><p>举例：</p><p><code>create user &#39;user1&#39;@&#39;ip地址&#39; identified by &#39;123&#39;;</code></p><h3 id="修改用户密码："><a href="#修改用户密码：" class="headerlink" title="修改用户密码："></a>修改用户密码：</h3><p>修改自己的密码：</p><p><code>set password = password(‘新密码’);</code></p><p>修改他人的密码（有权限的情况下）：</p><p><code>set password for ‘用户名’@’允许登录的位置’ = password(‘新密码’);</code></p><h2 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h2><h4 id="什么是权限"><a href="#什么是权限" class="headerlink" title="什么是权限"></a>什么是权限</h4><p>权限就是可以做某事的权利，比如可以“insert”（插入），可以create（创建），update，delete…</p><p>其中“all”，表示“所有权限”</p><p>实际上，在mysql系统中，权限就是如上述这些“单词”；</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fxwygvo6a7j30e807atao.jpg" alt=""></p><p>细化为：</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fxwyhbk09mj30f40ea7bh.jpg" alt=""></p><h4 id="授予用户权限"><a href="#授予用户权限" class="headerlink" title="授予用户权限"></a>授予用户权限</h4><p><code>grant 权限1，权限2，.... on 某库.某下级单位 to ‘用户名’@’允许登录的位置’ 【identified by ‘密码’】</code></p><p>说明：</p><p>1，权限名称有比如：insert, update, select, delete, create, drop ……</p><p>2，“某下级单位”是指一个库中的下级数据元素，目前我们只学了2个：表，视图；</p><p>比如：php.学生表 或 php.int_test</p><p>有两个特殊写法：</p><p><code>*.*</code>：表示所有数据库中的所有下级单位；</p><p><code>某库.*</code> ： 表示该数据库中的所有下级单位</p><p>3， 如果是对现有用户授予权限，则identified 部分可以省略，如果不省略，就是表示修改其密码；</p><p>而对于一个新用户（即‘用户名’@’允许登录的位置’其实尚不存在），则是<code>identified by</code>部分不可以省略，而且，该grant语句，其实就是会创建一个新用户！</p><p>4，也可以授予“所有权限”：</p><p><code>grant all privileges on php.* to &#39;user1&#39;@&#39;ip地址&#39;;</code></p><h4 id="取消用户权限"><a href="#取消用户权限" class="headerlink" title="取消用户权限"></a>取消用户权限</h4><p><code>revoke 权限1，权限2，.... on 某库.某下级单位 from ‘用户名’@’允许登录的位置’</code></p><p>说明：</p><p>1各项含义跟grant语句一样；</p><p>2表示将某个用户在某个数据单位上的某些权限取消。</p><p><strong>整理于百度</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/006doHETly1fxwyrotwozj33y8280e8c.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="MySQL笔记" scheme="https://GodPang.github.io/categories/MySQL%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="MySQL" scheme="https://GodPang.github.io/tags/MySQL/"/>
+    
+  </entry>
   
   <entry>
     <title>ctf基本的文件上传与绕过学习</title>
