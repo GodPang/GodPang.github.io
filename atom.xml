@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://GodPang.github.io/"/>
-  <updated>2019-02-24T12:18:00.631Z</updated>
+  <updated>2019-03-05T06:37:30.460Z</updated>
   <id>https://GodPang.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GitHub学生认证</title>
+    <link href="https://GodPang.github.io/2019/03/05/GitHub%E5%AD%A6%E7%94%9F%E8%AE%A4%E8%AF%81/"/>
+    <id>https://GodPang.github.io/2019/03/05/GitHub学生认证/</id>
+    <published>2019-03-05T06:28:41.000Z</published>
+    <updated>2019-03-05T06:37:30.460Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006doHETly1g0rwseiksyj30k708fq3e.jpg" alt=""><br><a id="more"></a></p><h2 id="github学生包是什么"><a href="#github学生包是什么" class="headerlink" title="github学生包是什么"></a>github学生包是什么</h2><p>GitHub 有一项教育支撑计划，叫 GitHub Education。除了在线课程和交流获得之外，GitHub Education 还提供了一项极其良心的福利，叫[<a href="https://education.github.com/pack" target="_blank" rel="noopener">GitHub学生开发工具包</a>]</p><h2 id="下面介绍如何获得学生认证"><a href="#下面介绍如何获得学生认证" class="headerlink" title="下面介绍如何获得学生认证"></a>下面介绍如何获得学生认证</h2><p><img src="http://ww1.sinaimg.cn/large/006doHETly1g0rw0vd18zj31h30nxadh.jpg" alt=""></p><ol><li>进入[<a href="https://education.github.com/pack" target="_blank" rel="noopener">GitHub学生开发工具包</a>]网页后点击<a href="https://education.github.com/pack/offers" target="_blank" rel="noopener">get your back</a> 进入下一步,点击Yes,I’m a student 填写表单，在复选框中选择对应的校园邮箱账户。如果你没有校园邮箱，可以选择第一个选项，然后上传学信网截图，或者学生证照片。（由于我事先在github上登陆过，所以和其他人有些不同直接跳的了这个界面）</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1g0rw33plqsj30of0fzq44.jpg" alt=""></p><ol start="3"><li><p>上传学生证，填写理由</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">I am a junior student from China, and I used Github to share my code with my classmates and friends since I entered university.</span><br></pre></td></tr></table></figure></li><li><p>等待审核。查看是否成功。</p><h2 id="GitHub-学生开发工具包提供了什么"><a href="#GitHub-学生开发工具包提供了什么" class="headerlink" title="GitHub 学生开发工具包提供了什么"></a>GitHub 学生开发工具包提供了什么</h2></li></ol><ul><li>Atom：由 GitHub 推出的开源程式代码编辑器（免费）</li><li>AWS 亚马逊云服务 $75-$150 信用额度。</li><li>Bitnami：云端应用平台，Business 3 Plan 一年（价值 49刀/月）</li><li>CARTO 为期两年的高级账户。</li><li>CrowdFlower：商业数据分析、处理平台，含 50 刀额度（价值 2,500 刀/月）</li><li>Datadog 2 年期高级账户服务。</li><li>DigitalOcean $50 账户信用额度。</li><li>Udacity 优达学城为期 1 个月的订阅服务，可以学习所有纳米学位课程，正常售价为 $199 。</li><li>Flatiron School 一个月高级账户，正常售价为 $149/月。</li><li>GitKraken 1 年期高级账户，正常售价 $60/月。</li><li>GitHub：免费升级为 Micro Account（价值 7 刀/月）</li><li>Hackhands：24/7 即时程式设计协助平台，含 25 刀的额度</li><li>Namecheap：.me 网域名称一年(价值8.99刀)、PositiveSSL 一年（价值9刀）</li><li>SendGrid：Email 相关服务，学生方案每月可发送 15,000 封邮件</li><li>Stripe：网页及行动支付平台，首次 1,000美刀收益无需支付手续费</li><li>Travis CI：针对开放原始码或私人项目的集成平台，提供 Private Builds（价值 69 刀/月）</li><li>Unreal Engine：针对 PC、行动装置、网页和 VR 所建置的游戏开发平台，提供 Unreal Engine 帐户权限（价值 19 刀/月）</li></ul><p><img src="http://ww1.sinaimg.cn/large/006doHETly1g0rwbmduq8j30rd2264a2.jpg" alt=""></p><h3 id="JetBrains-学生开发授权-也是我的目的"><a href="#JetBrains-学生开发授权-也是我的目的" class="headerlink" title="JetBrains 学生开发授权(也是我的目的)"></a>JetBrains 学生开发授权(也是我的目的)</h3><p>JetBrains 是业界知名的 IDE 开发商，旗下有非常多的开发者工具。无论是学习 Java，PHP，Ruby，Python，JavaScript，Objective-C，.NET 任何一种开发技术，都有对应的开发工具帮助到你。</p><p>JetBrains 的教育优惠官方称之为<a href="https://www.jetbrains.com/zh/student/" target="_blank" rel="noopener">JetBrains Toolbox 专业开发工具学生免费授权计划</a>。学生可以免费获得「All Products Pack 全产品包」。这个优惠力度可以说极其良心，因为 JetBrains 全产品包的订阅售价为 249 美元/年。</p><ul><li style="list-style: none"><input type="checkbox" checked> END</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/006doHETly1g0rwseiksyj30k708fq3e.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="杂货铺" scheme="https://GodPang.github.io/categories/%E6%9D%82%E8%B4%A7%E9%93%BA/"/>
+    
+    
+      <category term="软件认证" scheme="https://GodPang.github.io/tags/%E8%BD%AF%E4%BB%B6%E8%AE%A4%E8%AF%81/"/>
+    
+  </entry>
   
   <entry>
     <title>开学了</title>
@@ -171,28 +193,6 @@
   </entry>
   
   <entry>
-    <title>MySQL2</title>
-    <link href="https://GodPang.github.io/2018/10/13/MySQL2/"/>
-    <id>https://GodPang.github.io/2018/10/13/MySQL2/</id>
-    <published>2018-10-13T13:48:40.000Z</published>
-    <updated>2018-10-30T02:52:53.686Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwq27s2l1nj31gg0ti0yg.jpg" alt=""><br><a id="more"></a></p><ol><li>首先，我们创建一个数据库，给它一个名字，比如 mysql_shiyan，以后的几次实验也是对 mysql_shiyan 这个数据库进行操作。 语句格式为 CREATE DATABASE &lt;数据库名字&gt;;，（注意不要漏掉分号 ;），前面的 CREATE DATABASE 也可以使用小写，具体命令为：<blockquote><p>CREATE DATABASE mysql_shiyan;</p></blockquote></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6iita7quj30c00760t4.jpg" alt=""></p><p>在大多数系统中，SQL 语句都是不区分大小写的，因此以下语句都是合法的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE name1;</span><br><span class="line">create database name2;</span><br><span class="line">CREATE database name3;</span><br><span class="line">create DAtabaSE name4;</span><br></pre></td></tr></table></figure></p><ol start="2"><li>接下来的操作，就在刚才创建的 mysql_shiyan 中进行，首先要连接数据库，使用语句 use &lt;数据库名字&gt;：<blockquote><p>use mysql_shiyan</p></blockquote></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6ilijafuj306e01lwec.jpg" alt=""></p><p>输入命令 show tables; 可以查看当前数据库里有几张表，现在mysql_shiyan 里还是空的：</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6in752wvj307n02uwej.jpg" alt=""></p><ol start="3"><li>一个数据库中一般会有多张表;在数据库中新建一张表的语句格式为：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE 表的名字</span><br><span class="line">(</span><br><span class="line">列名a 数据类型(数据长度),</span><br><span class="line">列名b 数据类型(数据长度)，</span><br><span class="line">列名c 数据类型(数据长度)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></li></ol><p>我们尝试在 mysql_shiyan 中新建一张表 employee，包含姓名，ID 和电话信息，所以语句为：</p><blockquote><p>CREATE TABLE employee (id int(10),name char(20),phone int(12));</p></blockquote><p>然后再创建一张表 department，包含名称和电话信息，想让命令看起来更整洁，你可以这样输入命令：</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6itlb43vj30af03v3yo.jpg" alt=""></p><p>这时候再 show tables;<br>一下，可以看到刚才添加的两张表</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6iwhceu0j309a04e3ym.jpg" alt=""></p><ol start="4"><li>刚才我们新建了两张表，使用语句 SELECT * FROM employee; 查看表中的内容，可以看到 employee 表中现在还是空的：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6izts7vbj308r024jrb.jpg" alt=""></p><p>我们通过 INSERT 语句向表中插入数据，语句格式为：</p><blockquote><p>INSERT INTO 表的名字(列名a,列名b,列名c) VALUES(值1,值2,值3);</p></blockquote><p>我们尝试向 employee 中加入 Tom、Jack 和 Rose：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO employee(id,name,phone) VALUES(01,&apos;Tom&apos;,110110110);</span><br><span class="line"></span><br><span class="line">INSERT INTO employee VALUES(02,&apos;Jack&apos;,119119119);</span><br><span class="line"></span><br><span class="line">INSERT INTO employee(id,name) VALUES(03,&apos;Rose&apos;);</span><br></pre></td></tr></table></figure></p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6j8vdcn3j308p04pwel.jpg" alt=""></p><p>删除一条记录，命令如下：</p><blockquote><p>delete from employee(表名) where id（列名） = ‘2（元素名称）’;</p></blockquote><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6j8a1l1lj30cd05oglz.jpg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/006doHETly1fwq27s2l1nj31gg0ti0yg.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
-    
-    </summary>
-    
-      <category term="MySQL笔记" scheme="https://GodPang.github.io/categories/MySQL%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="MySQL" scheme="https://GodPang.github.io/tags/MySQL/"/>
-    
-  </entry>
-  
-  <entry>
     <title>MySQL1</title>
     <link href="https://GodPang.github.io/2018/10/13/MySQL1/"/>
     <id>https://GodPang.github.io/2018/10/13/MySQL1/</id>
@@ -204,6 +204,28 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/006doHETly1fwq26ljdxlj308c04oglg.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="MySQL笔记" scheme="https://GodPang.github.io/categories/MySQL%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="MySQL" scheme="https://GodPang.github.io/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL2</title>
+    <link href="https://GodPang.github.io/2018/10/13/MySQL2/"/>
+    <id>https://GodPang.github.io/2018/10/13/MySQL2/</id>
+    <published>2018-10-13T13:48:40.000Z</published>
+    <updated>2018-10-30T02:52:53.686Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006doHETly1fwq27s2l1nj31gg0ti0yg.jpg" alt=""><br><a id="more"></a></p><ol><li>首先，我们创建一个数据库，给它一个名字，比如 mysql_shiyan，以后的几次实验也是对 mysql_shiyan 这个数据库进行操作。 语句格式为 CREATE DATABASE &lt;数据库名字&gt;;，（注意不要漏掉分号 ;），前面的 CREATE DATABASE 也可以使用小写，具体命令为：<blockquote><p>CREATE DATABASE mysql_shiyan;</p></blockquote></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6iita7quj30c00760t4.jpg" alt=""></p><p>在大多数系统中，SQL 语句都是不区分大小写的，因此以下语句都是合法的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">CREATE DATABASE name1;</span><br><span class="line">create database name2;</span><br><span class="line">CREATE database name3;</span><br><span class="line">create DAtabaSE name4;</span><br></pre></td></tr></table></figure></p><ol start="2"><li>接下来的操作，就在刚才创建的 mysql_shiyan 中进行，首先要连接数据库，使用语句 use &lt;数据库名字&gt;：<blockquote><p>use mysql_shiyan</p></blockquote></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6ilijafuj306e01lwec.jpg" alt=""></p><p>输入命令 show tables; 可以查看当前数据库里有几张表，现在mysql_shiyan 里还是空的：</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6in752wvj307n02uwej.jpg" alt=""></p><ol start="3"><li>一个数据库中一般会有多张表;在数据库中新建一张表的语句格式为：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE 表的名字</span><br><span class="line">(</span><br><span class="line">列名a 数据类型(数据长度),</span><br><span class="line">列名b 数据类型(数据长度)，</span><br><span class="line">列名c 数据类型(数据长度)</span><br><span class="line">);</span><br></pre></td></tr></table></figure></li></ol><p>我们尝试在 mysql_shiyan 中新建一张表 employee，包含姓名，ID 和电话信息，所以语句为：</p><blockquote><p>CREATE TABLE employee (id int(10),name char(20),phone int(12));</p></blockquote><p>然后再创建一张表 department，包含名称和电话信息，想让命令看起来更整洁，你可以这样输入命令：</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6itlb43vj30af03v3yo.jpg" alt=""></p><p>这时候再 show tables;<br>一下，可以看到刚才添加的两张表</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6iwhceu0j309a04e3ym.jpg" alt=""></p><ol start="4"><li>刚才我们新建了两张表，使用语句 SELECT * FROM employee; 查看表中的内容，可以看到 employee 表中现在还是空的：</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6izts7vbj308r024jrb.jpg" alt=""></p><p>我们通过 INSERT 语句向表中插入数据，语句格式为：</p><blockquote><p>INSERT INTO 表的名字(列名a,列名b,列名c) VALUES(值1,值2,值3);</p></blockquote><p>我们尝试向 employee 中加入 Tom、Jack 和 Rose：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">INSERT INTO employee(id,name,phone) VALUES(01,&apos;Tom&apos;,110110110);</span><br><span class="line"></span><br><span class="line">INSERT INTO employee VALUES(02,&apos;Jack&apos;,119119119);</span><br><span class="line"></span><br><span class="line">INSERT INTO employee(id,name) VALUES(03,&apos;Rose&apos;);</span><br></pre></td></tr></table></figure></p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6j8vdcn3j308p04pwel.jpg" alt=""></p><p>删除一条记录，命令如下：</p><blockquote><p>delete from employee(表名) where id（列名） = ‘2（元素名称）’;</p></blockquote><p><img src="http://ww1.sinaimg.cn/large/006doHETly1fw6j8a1l1lj30cd05oglz.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/006doHETly1fwq27s2l1nj31gg0ti0yg.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
     
     </summary>
     
