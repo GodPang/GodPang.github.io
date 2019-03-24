@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://GodPang.github.io/"/>
-  <updated>2019-03-05T06:37:30.460Z</updated>
+  <updated>2019-03-24T10:55:03.900Z</updated>
   <id>https://GodPang.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>路由器刷固件</title>
+    <link href="https://GodPang.github.io/2019/03/24/%E8%B7%AF%E7%94%B1%E5%99%A8%E5%88%B7%E5%9B%BA%E4%BB%B6/"/>
+    <id>https://GodPang.github.io/2019/03/24/路由器刷固件/</id>
+    <published>2019-03-24T10:51:33.000Z</published>
+    <updated>2019-03-24T10:55:03.900Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="http://ww1.sinaimg.cn/large/006doHETly1g1e2hwd20hj31hf0p1dj0.jpg" alt=""><br><a id="more"></a></p><h1 id="斐讯k2刷固件"><a href="#斐讯k2刷固件" class="headerlink" title="斐讯k2刷固件"></a>斐讯k2刷固件</h1><p>周日下午闲来无聊准备折腾一下宿舍里的垃圾路由器斐讯k2<br>原本只是听说过，但没自己弄过，尝试着自己刷一下,我这里尝试的是高恪（读作kè）<br>本来以为要去找<a href="http://bbs.pcbeta.com/" target="_blank" rel="noopener">远景</a>软件，找了一圈神他妈远景，是<a href="https://www.right.com.cn/forum/" target="_blank" rel="noopener">恩山</a></p><h2 id="工具"><a href="#工具" class="headerlink" title="工具"></a>工具</h2><p>要用到的东西 <code>bread</code> <a href="https://tbvv.net/k2/breed.zip" target="_blank" rel="noopener">https://tbvv.net/k2/breed.zip</a><br><code>K2等7620A刷机专用固件-支持升级AP固件-4.0.1.11029..bin</code><br>K2 K1等7620A系列专用底包：<a href="https://pan.baidu.com/s/1o7U6QpW" target="_blank" rel="noopener">https://pan.baidu.com/s/1o7U6QpW</a><br><code>高恪-S1A_8M(K2+K1等8M闪存+64M内存7620A机型全功能升级包)-4.2.6.15899.bin.web</code><br>K2及其他机型（S1B、MTK 7621等）的免费固件地址:<a href="https://pan.baidu.com/s/1y15rUtAUkhY8XvPrtv_vSA" target="_blank" rel="noopener">https://pan.baidu.com/s/1y15rUtAUkhY8XvPrtv_vSA</a> 提取码:f7kp</p><p><img src="http://ww1.sinaimg.cn/large/006doHETly1g1e233tfanj309i03y0un.jpg" alt=""></p><h2 id="刷机Breed"><a href="#刷机Breed" class="headerlink" title="刷机Breed"></a>刷机Breed</h2><ol><li><p>下载辅助工具，解压所有文件到任意目录。</p></li><li><p>双击运行 刷机.bat 按照提示输入路由的IP和密码，如果是默认的直接按回车。<br>(全新或恢复出厂没设置过的路由直接回车按提示配置路由)</p></li><li><p>等待路由重启，1分钟左右会用浏览器打开路由页面，如果自动登录成功或者手动升级页面有变  化 就说明刷breed成功了。<br>(管理密码: tbvv.net)</p></li><li><p>接着进入：高级设置 —&gt; 系统设置 —&gt; 手动升级 —&gt; 下载备份EEPROM(是一个压缩包)。</p></li><li><p>……完成。</p></li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1g1e27a3z5oj30k60d87db.jpg" alt=""></p><ol start="2"><li>斐讯查看ip浏览器输入<code>p.to</code>，在高级设置查看</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1g1e29b0tvxj30j107jtcj.jpg" alt=""></p><h2 id="进bread刷入K2等7620A刷机专用固件-支持升级AP固件-4-0-1-11029-bin"><a href="#进bread刷入K2等7620A刷机专用固件-支持升级AP固件-4-0-1-11029-bin" class="headerlink" title="进bread刷入K2等7620A刷机专用固件-支持升级AP固件-4.0.1.11029..bin"></a>进bread刷入<code>K2等7620A刷机专用固件-支持升级AP固件-4.0.1.11029..bin</code></h2><ol><li>路由WAN口的网线拔掉避免IP冲突，电脑网线连接路由LAN口，电脑网卡设置为自动获取IP<br>路由断电3秒—&gt;按住复位键不要松手—&gt;插入电源—&gt;等待5秒后松开复位键—&gt;浏览器输入192.168.1.1—&gt;固件更新—&gt;选择固件刷入。</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1g1e2dktmbwj30nu0co40f.jpg" alt=""></p><ol start="2"><li>等待路由器刷机成功并重启即可访问管理后台</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1g1e2eg1jycj30mr06pdgr.jpg" alt=""></p><ol start="3"><li>后台地址 192.168.1.1</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1g1e2hwd20hj31hf0p1dj0.jpg" alt=""></p><h2 id="进入高恪后台刷入高恪-S1A-8M-K2-K1等8M闪存-64M内存7620A机型全功能升级包-4-2-6-15899-bin-web"><a href="#进入高恪后台刷入高恪-S1A-8M-K2-K1等8M闪存-64M内存7620A机型全功能升级包-4-2-6-15899-bin-web" class="headerlink" title="进入高恪后台刷入高恪-S1A_8M(K2+K1等8M闪存+64M内存7620A机型全功能升级包)-4.2.6.15899.bin.web"></a>进入高恪后台刷入<code>高恪-S1A_8M(K2+K1等8M闪存+64M内存7620A机型全功能升级包)-4.2.6.15899.bin.web</code></h2><ol><li>系统管理——&gt;固件升级——&gt;本地升级——&gt;选择.web</li></ol><p><img src="http://ww1.sinaimg.cn/large/006doHETly1g1e2mrmlasj311b0qgtaw.jpg" alt=""></p><h2 id="附一个比较明白的视频地址"><a href="#附一个比较明白的视频地址" class="headerlink" title="附一个比较明白的视频地址"></a>附一个比较明白的视频地址</h2><p><a href="https://v.youku.com/v_show/id_XMjk1MTYyMTE4MA==.html?spm=a2h0j.11185381.listitem_page1.5~A" target="_blank" rel="noopener">高恪官方教程</a></p><h2 id="过段时间在刷带ssr的潘多拉。"><a href="#过段时间在刷带ssr的潘多拉。" class="headerlink" title="过段时间在刷带ssr的潘多拉。"></a>过段时间在刷带ssr的潘多拉。</h2><ol><li>不让路由器折腾，和咸鱼有啥区别。<br>又水一篇博客。。。。<br>end。。。</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://ww1.sinaimg.cn/large/006doHETly1g1e2hwd20hj31hf0p1dj0.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="杂货铺" scheme="https://GodPang.github.io/categories/%E6%9D%82%E8%B4%A7%E9%93%BA/"/>
+    
+    
+      <category term="路由器" scheme="https://GodPang.github.io/tags/%E8%B7%AF%E7%94%B1%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>GitHub学生认证</title>
