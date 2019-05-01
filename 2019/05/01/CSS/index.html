@@ -90,14 +90,14 @@
 <meta property="og:description" content="一切都会好的，你看城南的花都开了">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://ww1.sinaimg.cn/large/006doHETly1g2llvvs1kmj315r0n113i.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2llvvumjpj315r0n1gwd.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2llvw09c0j30qf0gjwv8.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2llvvssrkj30ie0bg48w.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2ln1buc9xj315r0n1gwd.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2ln1vnebkj30qf0gjwv8.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2ln20lyu8j30ie0bg48w.jpg">
 <meta property="og:image" content="https://godpang.github.io/2019/05/01/CSS/2019-05-01-CSS/1.gif">
 <meta property="og:image" content="https://godpang.github.io/2019/05/01/CSS/2019-05-01-CSS/2.gif">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2llvvvosjj30pz083771.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2llvw2xrjj30y60j0ni4.jpg">
-<meta property="og:updated_time" content="2019-05-01T02:40:32.124Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2ln2rrnn3j30y60j0ni4.jpg">
+<meta property="og:updated_time" content="2019-05-01T03:09:39.771Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS">
 <meta name="twitter:description" content="一切都会好的，你看城南的花都开了">
@@ -455,11 +455,11 @@
 <h1 id="二：盒子模型（重点）"><a href="#二：盒子模型（重点）" class="headerlink" title="二：盒子模型（重点）"></a>二：盒子模型（重点）</h1><h2 id="1、网页本质"><a href="#1、网页本质" class="headerlink" title="1、网页本质"></a>1、网页本质</h2><p>所谓盒子模型就是把HTML页面中的元素看作是一个矩形的盒子，也就是一个盛装内容的容器。每个矩形都由元素的内容、内边距（padding）、边框（border）和外边距（margin）组成。</p>
 <p><img src="http://ww1.sinaimg.cn/large/006doHETly1g2llvvs1kmj315r0n113i.jpg" alt=""></p>
 <p>看透网页布局的本质：  把网页元素比如文字图片等等，放入盒子里面，然后利用CSS摆放盒子的过程，就是网页布局。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006doHETly1g2llvvumjpj315r0n1gwd.jpg" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/006doHETly1g2ln1buc9xj315r0n1gwd.jpg" alt=""></p>
 <p>盒子是有什么构成的呢？</p>
 <h2 id="2、盒子模型"><a href="#2、盒子模型" class="headerlink" title="2、盒子模型"></a>2、盒子模型</h2><p>首先，我们来看一张图，来体会下什么是盒子模型。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006doHETly1g2llvw09c0j30qf0gjwv8.jpg" alt=""></p>
-<p><img src="https://ws1.sinaimg.cn/large/006doHETly1g2llvvssrkj30ie0bg48w.jpg" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/006doHETly1g2ln1vnebkj30qf0gjwv8.jpg" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/006doHETly1g2ln20lyu8j30ie0bg48w.jpg" alt=""></p>
 <h2 id="3、盒子边框（border）"><a href="#3、盒子边框（border）" class="headerlink" title="3、盒子边框（border）"></a>3、盒子边框（border）</h2><p>语法：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border : border-width || border-style || border-color</span><br></pre></td></tr></table></figure>
 <p>边框属性—设置边框样式（border-style）</p>
@@ -673,8 +673,7 @@
 <p>这句话的意思是 子级是绝对定位的话， 父级要用相对定位。</p>
 <p>首先， 我们说下， 绝对定位是将元素依据最近的已经定位绝对、固定或相对定位）的父元素（祖先）进行定位。</p>
 <p>就是说， 子级是绝对定位，父亲只要是定位即可（不管父亲是绝对定位还是相对定位，甚至是固定定位都可以），就是说， 子绝父绝，子绝父相都是正确的。</p>
-<p>但是，在我们网页布局的时候， 最常说的 子绝父相是怎么来的呢？ 请看如下图：<img src="https://ws1.sinaimg.cn/large/006doHETly1g2llvw2xrjj30y60j0ni4.jpg" alt=""></p>
-<p>所以，我们可以得出如下结论：</p>
+<p>但是，在我们网页布局的时候， 最常说的 子绝父相是怎么来的呢？ 请看如下图：<br><img src="https://ws1.sinaimg.cn/large/006doHETly1g2ln2rrnn3j30y60j0ni4.jpg" alt=""><br>所以，我们可以得出如下结论：</p>
 <p>因为子级是绝对定位，不会占有位置， 可以放到父盒子里面的任何一个地方。</p>
 <p>父盒子布局时，需要占有位置，因此父亲只能是 相对定位.</p>
 <p>这就是子绝父相的由来。</p>
@@ -717,6 +716,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/05/01/JavaScript/" rel="prev" title="JavaScript">
+                JavaScript <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -800,7 +803,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">18</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
