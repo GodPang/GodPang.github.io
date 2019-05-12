@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://godpang.github.io/2019/05/01/CSS/2019-05-01-CSS/2.gif">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2llvvvosjj30pz083771.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2ln2rrnn3j30y60j0ni4.jpg">
-<meta property="og:updated_time" content="2019-05-01T03:09:39.771Z">
+<meta property="og:updated_time" content="2019-05-05T09:04:18.104Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS">
 <meta name="twitter:description" content="一切都会好的，你看城南的花都开了">
@@ -464,8 +464,16 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border : border-width || border-style || border-color</span><br></pre></td></tr></table></figure>
 <p>边框属性—设置边框样式（border-style）</p>
 <p>边框样式用于定义页面中边框的风格，常用属性值如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">none：没有边框即忽略所有边框的宽度（默认值）</span><br><span class="line"></span><br><span class="line">solid：边框为单实线(最为常用的)</span><br><span class="line"></span><br><span class="line">dashed：边框为虚线</span><br><span class="line"></span><br><span class="line">dotted：边框为点线</span><br><span class="line"></span><br><span class="line">double：边框为双实线</span><br></pre></td></tr></table></figure>
-<h2 id="4、盒子边框写法总结表"><a href="#4、盒子边框写法总结表" class="headerlink" title="4、盒子边框写法总结表"></a>4、盒子边框写法总结表</h2><table>
+<pre><code>none：没有边框即忽略所有边框的宽度（默认值）
+
+solid：边框为单实线(最为常用的)
+
+dashed：边框为虚线
+
+dotted：边框为点线
+
+double：边框为双实线
+</code></pre><h2 id="4、盒子边框写法总结表"><a href="#4、盒子边框写法总结表" class="headerlink" title="4、盒子边框写法总结表"></a>4、盒子边框写法总结表</h2><table>
 <thead>
 <tr>
 <th></th>
@@ -576,8 +584,8 @@
 <p>答案是：  其实他们大部分情况下是可以混用的。  就是说，你用内边距也可以，用外边距也可以。 你觉得哪个方便，就用哪个。</p>
 <p>但是，总有一个最好用的吧，我们根据稳定性来分，建议如下：</p>
 <p>按照 优先使用  宽度 （width）  其次 使用内边距（padding）    再次  外边距（margin）。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">width &gt;  padding  &gt;   margin</span><br></pre></td></tr></table></figure>
-<p>原因：</p>
+<pre><code>width &gt;  padding  &gt;   margin
+</code></pre><p>原因：</p>
 <ol>
 <li><p>margin 会有外边距合并 还有 ie6下面margin 加倍的bug（讨厌）所以最后使用。</p>
 </li>
@@ -590,9 +598,9 @@
 <p>定位的价值就是移动位置，让盒子移动到我们想要的位置上。</p>
 <p><a href="https://www.boxuegu.com/" target="_blank" rel="noopener">https://www.boxuegu.com/</a></p>
 <h2 id="1、为什么要用定位？"><a href="#1、为什么要用定位？" class="headerlink" title="1、为什么要用定位？"></a>1、为什么要用定位？</h2><p>那么定位，最长运用的场景再那里呢？   来看几幅图片，你一定会有感悟！</p>
-<p>第一幅图， 小黄色块可以在图片上移动：<img src=".\2019-05-01-CSS\1.gif" alt=""></p>
+<p>第一幅图， 小黄色块可以在图片上移动：<img src="/2019/05/01/CSS/.\2019-05-01-CSS\1.gif" alt=""></p>
 <p>第二幅图， 左右箭头压住图片：</p>
-<p><img src=".\2019-05-01-CSS\2.gif" alt=""></p>
+<p><img src="/2019/05/01/CSS/.\2019-05-01-CSS\2.gif" alt=""></p>
 <p>第三幅图,  hot 再盒子外面多出一块，更加突出：</p>
 <p><img src="https://ws1.sinaimg.cn/large/006doHETly1g2llvvvosjj30pz083771.jpg" alt=""></p>
 <h2 id="2、元素的定位属性"><a href="#2、元素的定位属性" class="headerlink" title="2、元素的定位属性"></a>2、元素的定位属性</h2><p>元素的定位属性主要包括定位模式和边偏移两部分。</p>

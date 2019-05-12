@@ -97,7 +97,7 @@
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2lmpk8c5uj30c107t3yq.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2lmv4zolaj30qx0ej0vu.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006doHETly1g2lmwsv2d6j30qo0fawfx.jpg">
-<meta property="og:updated_time" content="2019-05-01T03:05:36.005Z">
+<meta property="og:updated_time" content="2019-05-05T09:20:20.978Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JavaScript">
 <meta name="twitter:description" content="没学明白呢QAQ">
@@ -440,17 +440,15 @@
 <p>计算机为了更好的存储数据，将内存分为不同的内存单元。</p>
 <p><img src="https://ws1.sinaimg.cn/large/006doHETly1g2lmntc5l9j30kn05haa0.jpg" alt=""></p>
 </li>
-</ul>
-<ul>
 <li><p>为什么要使用变量</p>
 <p>从内存中取出一个存储单元，存储相应的数据。</p>
 <p><img src="https://ws1.sinaimg.cn/large/006doHETly1g2lmnzwjuij30kn05hq2w.jpg" alt=""></p>
 <p>为了方便存储数据和取数据，需要明确存储单元识别的方式和使用的用途。</p>
 <p>识别的方式：起名字 age</p>
 <p>使用用途：存放什么内容   18</p>
+<p>使用变量可以方便的获取或者修改内存中的数据</p>
 </li>
 </ul>
-<p>  使用变量可以方便的获取或者修改内存中的数据</p>
 <h3 id="2、如何使用变量"><a href="#2、如何使用变量" class="headerlink" title="2、如何使用变量"></a>2、如何使用变量</h3><ul>
 <li>var声明变量</li>
 </ul>
@@ -481,9 +479,9 @@
 <li>遵守驼峰命名法。首字母小写，后面单词的首字母需要大写。例如：userName、userPassword</li>
 </ul>
 <p>下面哪些变量名不合法</p>
+<p>  a<br>  1<br>  age18<br>  18age<br>  name<br>  $name<br>  _sex<br>  &amp;sex<br>  theworld  theWorld</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">a</span><br><span class="line">1</span><br><span class="line">age18</span><br><span class="line">18age</span><br><span class="line">name</span><br><span class="line">$name</span><br><span class="line">_sex</span><br><span class="line">&amp;sex</span><br><span class="line">theworld  theWorld</span><br></pre></td></tr></table></figure>
 <h3 id="5、交换两个变量中的值-案例"><a href="#5、交换两个变量中的值-案例" class="headerlink" title="5、交换两个变量中的值(案例)"></a>5、交换两个变量中的值(案例)</h3><h1 id="三、数据类型"><a href="#三、数据类型" class="headerlink" title="三、数据类型"></a>三、数据类型</h1><p>数据类型分为，“简单数据类型”和“复杂数据类型”，现在我们先学习“简单的数据类型”</p>
 <p>简单数据类型</p>
 <p>Number、String、Boolean、Undefined、Null</p>
@@ -494,13 +492,18 @@
 <p>浮点数精度的问题。</p>
 </li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">浮点数</span><br><span class="line">    var n = 5e-324;   // 科学计数法  5乘以10的-324次方</span><br><span class="line">浮点数值的最高精度是 17 位小数，但在进行算术计算时其精确度远远不如整数</span><br><span class="line">   var result = 0.1 + 0.2;    // 结果不是 0.3，而是：0.30000000000000004</span><br><span class="line">   console.log(0.07 * 100);</span><br><span class="line">   不要判断两个浮点数是否相等</span><br></pre></td></tr></table></figure>
-<p>数值判断</p>
+<pre><code>浮点数
+    var n = 5e-324;   // 科学计数法  5乘以10的-324次方
+浮点数值的最高精度是 17 位小数，但在进行算术计算时其精确度远远不如整数
+   var result = 0.1 + 0.2;    // 结果不是 0.3，而是：0.30000000000000004
+   console.log(0.07 * 100);
+   不要判断两个浮点数是否相等
+</code></pre><p>数值判断</p>
 <ul>
 <li><p>NaN：not a number</p>
 <ul>
 <li><p>NaN 与任何值都不相等，包括他本身</p>
-<p>在控制台中使用 6*’abc’  可以输出NaN</p>
+<p>在控制台中使用 6*‘abc’  可以输出NaN</p>
 </li>
 </ul>
 </li>
@@ -538,11 +541,11 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这是一个变量</span></span><br><span class="line"><span class="keyword">var</span> name = <span class="string">'hm'</span>;</span><br></pre></td></tr></table></figure>
 <h2 id="4-2-多行注释"><a href="#4-2-多行注释" class="headerlink" title="4.2 多行注释"></a>4.2 多行注释</h2><p>用来注释多条代码</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">var age = 18;</span></span><br><span class="line"><span class="comment">var name = 'zs';</span></span><br><span class="line"><span class="comment">console.log(name, age);</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-<h1 id="五、操作符"><a href="#五、操作符" class="headerlink" title="五、操作符"></a>五、操作符</h1><h2 id="5-1-算术运算符"><a href="#5-1-算术运算符" class="headerlink" title="5.1 算术运算符"></a>5.1 算术运算符</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">+ - * / %</span><br></pre></td></tr></table></figure>
-<h2 id="5-2-一元运算符"><a href="#5-2-一元运算符" class="headerlink" title="5.2  一元运算符"></a>5.2  一元运算符</h2><p>一元运算符：只有一个操作数的运算符</p>
+<h1 id="五、操作符"><a href="#五、操作符" class="headerlink" title="五、操作符"></a>五、操作符</h1><h2 id="5-1-算术运算符"><a href="#5-1-算术运算符" class="headerlink" title="5.1 算术运算符"></a>5.1 算术运算符</h2><pre><code>+ - * / %
+</code></pre><h2 id="5-2-一元运算符"><a href="#5-2-一元运算符" class="headerlink" title="5.2  一元运算符"></a>5.2  一元运算符</h2><p>一元运算符：只有一个操作数的运算符</p>
 <p>5 + 6  两个操作数的运算符 二元运算符</p>
 <p>++  自身加1</p>
-<p>– 自身减1</p>
+<p>-- 自身减1</p>
 <p><strong>前置++</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> num1 = <span class="number">5</span>;</span><br><span class="line">++ num1;</span><br></pre></td></tr></table></figure>
 <p><strong>后置++</strong></p>
@@ -550,13 +553,24 @@
 <p>思考题：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> b = ++a + ++a;</span><br><span class="line"><span class="built_in">console</span>.log(b);</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">var</span> b = a++ + a++;</span><br><span class="line"> <span class="built_in">console</span>.log(b);</span><br></pre></td></tr></table></figure>
-<h2 id="5-3-逻辑运算符-布尔运算符"><a href="#5-3-逻辑运算符-布尔运算符" class="headerlink" title="5.3 逻辑运算符(布尔运算符)"></a>5.3 逻辑运算符(布尔运算符)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&amp;&amp; 与 两个操作数同时为true，结果为true，否则都是false</span><br><span class="line">|| 或 两个操作数有一个为true，结果为true，否则为false</span><br><span class="line">!  非  取反</span><br></pre></td></tr></table></figure>
-<h2 id="5-4-关系运算符-比较运算符"><a href="#5-4-关系运算符-比较运算符" class="headerlink" title="5.4 关系运算符(比较运算符)"></a>5.4 关系运算符(比较运算符)</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;  &gt;  &gt;=  &lt;= == != === !==</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">==与===的区别：==只进行值得比较，===类型和值同时相等，则相等</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> == <span class="number">55</span>;    <span class="comment">// true</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> === <span class="number">55</span>;   <span class="comment">// false 值相等，类型不相等</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="number">55</span> === <span class="number">55</span>;     <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<h2 id="5-3-逻辑运算符-布尔运算符"><a href="#5-3-逻辑运算符-布尔运算符" class="headerlink" title="5.3 逻辑运算符(布尔运算符)"></a>5.3 逻辑运算符(布尔运算符)</h2><pre><code>&amp;&amp; 与 两个操作数同时为true，结果为true，否则都是false
+|| 或 两个操作数有一个为true，结果为true，否则为false
+!  非  取反
+</code></pre><h2 id="5-4-关系运算符-比较运算符"><a href="#5-4-关系运算符-比较运算符" class="headerlink" title="5.4 关系运算符(比较运算符)"></a>5.4 关系运算符(比较运算符)</h2><pre><code>&lt;  &gt;  &gt;=  &lt;= == != === !==
+</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">==与===的区别：==只进行值得比较，===类型和值同时相等，则相等</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> == <span class="number">55</span>;    <span class="comment">// true</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="string">'55'</span> === <span class="number">55</span>;   <span class="comment">// false 值相等，类型不相等</span></span><br><span class="line"><span class="keyword">var</span> result = <span class="number">55</span> === <span class="number">55</span>;     <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
 <h2 id="5-5-赋值运算符"><a href="#5-5-赋值运算符" class="headerlink" title="5.5 赋值运算符"></a>5.5 赋值运算符</h2><p>=   +=   -=   *=   /=   %=</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">例如：</span><br><span class="line">var num = 0;</span><br><span class="line">num += 5;   //相当于  num = num + 5;</span><br></pre></td></tr></table></figure>
-<h2 id="5-6-运算符的优先级"><a href="#5-6-运算符的优先级" class="headerlink" title="5.6 运算符的优先级"></a>5.6 运算符的优先级</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">优先级从高到底</span><br><span class="line">    1. ()  优先级最高</span><br><span class="line">    2. 一元运算符  ++   --   !</span><br><span class="line">    3. 算数运算符  先*  /  %   后 +   -</span><br><span class="line">    4. 关系运算符  &gt;   &gt;=   &lt;   &lt;=</span><br><span class="line">    5. 相等运算符   ==   !=    ===    !==</span><br><span class="line">    6. 逻辑运算符 先&amp;&amp;   后||</span><br><span class="line">    7. 赋值运算符</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">（<span class="number">4</span> &gt;= <span class="number">6</span>） || （<span class="string">'人'</span> != <span class="string">'阿凡达'</span>） &amp;&amp; (!(<span class="number">12</span> * <span class="number">2</span> == <span class="number">144</span>)) &amp;&amp; <span class="literal">true</span></span><br><span class="line">                <span class="literal">false</span>||<span class="literal">true</span></span><br><span class="line">由于|| 和&amp;&amp; 运算级别最低，因为在该表达式中没有赋值，所以可以加上小括号。</span><br></pre></td></tr></table></figure>
+<pre><code>例如：
+var num = 0;
+num += 5;   //相当于  num = num + 5;
+</code></pre><h2 id="5-6-运算符的优先级"><a href="#5-6-运算符的优先级" class="headerlink" title="5.6 运算符的优先级"></a>5.6 运算符的优先级</h2><pre><code>优先级从高到底
+    1. ()  优先级最高
+    2. 一元运算符  ++   --   !
+    3. 算数运算符  先*  /  %   后 +   -
+    4. 关系运算符  &gt;   &gt;=   &lt;   &lt;=
+    5. 相等运算符   ==   !=    ===    !==
+    6. 逻辑运算符 先&amp;&amp;   后||
+    7. 赋值运算符
+</code></pre><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">（<span class="number">4</span> &gt;= <span class="number">6</span>） || （<span class="string">'人'</span> != <span class="string">'阿凡达'</span>） &amp;&amp; (!(<span class="number">12</span> * <span class="number">2</span> == <span class="number">144</span>)) &amp;&amp; <span class="literal">true</span></span><br><span class="line">                <span class="literal">false</span>||<span class="literal">true</span></span><br><span class="line">由于|| 和&amp;&amp; 运算级别最低，因为在该表达式中没有赋值，所以可以加上小括号。</span><br></pre></td></tr></table></figure>
 <h1 id="六、流程控制"><a href="#六、流程控制" class="headerlink" title="六、流程控制"></a>六、流程控制</h1><blockquote>
 <p>程序的三种基本结构</p>
 </blockquote>
@@ -566,7 +580,7 @@
 <h3 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h3><p>循环结构：重复做一件事情</p>
 <h2 id="6-1-分支结构"><a href="#6-1-分支结构" class="headerlink" title="6.1 分支结构"></a>6.1 分支结构</h2><h3 id="if语句"><a href="#if语句" class="headerlink" title="if语句"></a>if语句</h3><p>语法结构</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="comment">/* 条件表达式 */</span>) &#123;</span><br><span class="line">  <span class="comment">// 执行语句</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="comment">/* 条件表达式 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// 否则执行语句</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> (<span class="comment">/* 条件1 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="comment">/* 条件2 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="comment">/* 条件3 */</span>)&#123;</span><br><span class="line">  <span class="comment">// 成立执行语句</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="comment">// 最后默认执行语句</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>案例：1、求两个数的最大数<br>        2、判断一个数是偶数还是奇数<br>     3、分数转换，把百分制转换成ABCDE   &lt;60  E  60-70 D  70-80 C  80-90 B  90 - 100 A</p>
+<p>案例：1、求两个数的最大数<br>        2、判断一个数是偶数还是奇数<br>     3、分数转换，把百分制转换成ABCDE   \&lt;60  E  60-70 D  70-80 C  80-90 B  90 - 100 A</p>
 <h2 id="6-2-循环结构"><a href="#6-2-循环结构" class="headerlink" title="6.2 循环结构"></a>6.2 循环结构</h2><p>在javascript中，循环语句有三种，while、do..while、for循环。</p>
 <h3 id="while语句"><a href="#while语句" class="headerlink" title="while语句"></a>while语句</h3><p>基本语法：</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 当循环条件为true时，执行循环体，</span></span><br><span class="line"><span class="comment">// 当循环条件为false时，结束循环。</span></span><br><span class="line"><span class="keyword">while</span> (循环条件) &#123;</span><br><span class="line">  <span class="comment">//循环体</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -665,10 +679,22 @@
 <li><strong>求组数中的最小值（作业2）</strong></li>
 </ul>
 <p>返回值详解：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">如果函数没有显示的使用 return语句 ，那么函数有默认的返回值：undefined</span><br><span class="line">如果函数使用 return语句，那么跟再return后面的值，就成了函数的返回值</span><br><span class="line">如果函数使用 return语句，但是return后面没有任何值，那么函数的返回值也是：undefined</span><br><span class="line">函数使用return语句后，这个函数会在执行完 return 语句之后停止并立即退出，也就是说return后面的所有其他代码都不会再执行。</span><br></pre></td></tr></table></figure>
-<h1 id="九、什么是对象"><a href="#九、什么是对象" class="headerlink" title="九、什么是对象"></a>九、什么是对象</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">现实生活中：万物皆对象，对象是一个具体的事物，一个具体的事物就会有行为和特征。</span><br><span class="line">举例： 一部车，一个手机</span><br><span class="line">车是一类事物，门口停的那辆车才是对象</span><br><span class="line">    特征：红色、四个轮子</span><br><span class="line">    行为：驾驶、刹车</span><br></pre></td></tr></table></figure>
-<h2 id="1、JavaScript中的对象"><a href="#1、JavaScript中的对象" class="headerlink" title="1、JavaScript中的对象"></a>1、JavaScript中的对象</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">JavaScript中的对象其实就是生活中对象的一个抽象</span><br><span class="line">JavaScript的对象是无序属性的集合。</span><br><span class="line">    其属性可以包含基本值、对象或函数。对象就是一组没有顺序的值。我们可以把JavaScript中的对象想象成键值对，其中值可以是数据和函数。</span><br><span class="line">对象的行为和特征</span><br><span class="line">    特征---属性</span><br><span class="line">    行为---方法</span><br></pre></td></tr></table></figure>
-<ul>
+<pre><code>如果函数没有显示的使用 return语句 ，那么函数有默认的返回值：undefined
+如果函数使用 return语句，那么跟再return后面的值，就成了函数的返回值
+如果函数使用 return语句，但是return后面没有任何值，那么函数的返回值也是：undefined
+函数使用return语句后，这个函数会在执行完 return 语句之后停止并立即退出，也就是说return后面的所有其他代码都不会再执行。
+</code></pre><h1 id="九、什么是对象"><a href="#九、什么是对象" class="headerlink" title="九、什么是对象"></a>九、什么是对象</h1><pre><code>现实生活中：万物皆对象，对象是一个具体的事物，一个具体的事物就会有行为和特征。
+举例： 一部车，一个手机
+车是一类事物，门口停的那辆车才是对象
+    特征：红色、四个轮子
+    行为：驾驶、刹车
+</code></pre><h2 id="1、JavaScript中的对象"><a href="#1、JavaScript中的对象" class="headerlink" title="1、JavaScript中的对象"></a>1、JavaScript中的对象</h2><pre><code>JavaScript中的对象其实就是生活中对象的一个抽象
+JavaScript的对象是无序属性的集合。
+    其属性可以包含基本值、对象或函数。对象就是一组没有顺序的值。我们可以把JavaScript中的对象想象成键值对，其中值可以是数据和函数。
+对象的行为和特征
+    特征---属性
+    行为---方法
+</code></pre><ul>
 <li>事物的特征在对象中用属性来表示。</li>
 <li>事物的行为在对象中用方法来表示。</li>
 </ul>
@@ -677,16 +703,25 @@
 <p>通过构造函数来创建对象。(第一个单词的第一个字母大写，后续的每一个单词的第一个字母都大写)</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age, job</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">  <span class="keyword">this</span>.age = age;</span><br><span class="line">  <span class="keyword">this</span>.job = job;</span><br><span class="line">  <span class="keyword">this</span>.sayHi = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'Hello,everyBody'</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> p1 = <span class="keyword">new</span> Person(<span class="string">'张三'</span>, <span class="number">22</span>, <span class="string">'actor'</span>);</span><br><span class="line"><span class="keyword">var</span> p2 = <span class="keyword">new</span> Person(<span class="string">'李四'</span>,<span class="number">20</span>, <span class="string">'student'</span>);</span><br><span class="line">p1.sayHi();</span><br></pre></td></tr></table></figure>
 <h2 id="4、属性和方法"><a href="#4、属性和方法" class="headerlink" title="4、属性和方法"></a>4、属性和方法</h2><p>、</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果一个变量属于一个对象所有，那么该变量就可以称之为该对象的一个属性，属性一般是名词，用来描述事物的特征</span><br><span class="line">如果一个函数属于一个对象所有，那么该函数就可以称之为该对象的一个方法，方法是动词，描述事物的行为和功能</span><br></pre></td></tr></table></figure>
-<h2 id="5、new关键字"><a href="#5、new关键字" class="headerlink" title="5、new关键字"></a>5、new关键字</h2><p>构造函数 ，是一种特殊的函数。主要用来在创建对象时初始化对象， 即为对象成员变量赋初始值，总与new运算符一起使用在创建对象的语句中。</p>
+<pre><code>如果一个变量属于一个对象所有，那么该变量就可以称之为该对象的一个属性，属性一般是名词，用来描述事物的特征
+如果一个函数属于一个对象所有，那么该函数就可以称之为该对象的一个方法，方法是动词，描述事物的行为和功能
+</code></pre><h2 id="5、new关键字"><a href="#5、new关键字" class="headerlink" title="5、new关键字"></a>5、new关键字</h2><p>构造函数 ，是一种特殊的函数。主要用来在创建对象时初始化对象， 即为对象成员变量赋初始值，总与new运算符一起使用在创建对象的语句中。</p>
 <ol>
 <li>构造函数用于创建一类对象，首字母要大写。</li>
 <li>构造函数要和new一起使用才有意义。</li>
 </ol>
 <p>new在执行时会做四件事情</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">new会在内存中创建一个新的空对象</span><br><span class="line">new 会让this指向这个新的对象</span><br><span class="line">执行构造函数  目的：给这个新对象加属性和方法</span><br><span class="line">new会返回这个新对象</span><br></pre></td></tr></table></figure>
-<h2 id="3-6-this详解"><a href="#3-6-this详解" class="headerlink" title="3.6 this详解"></a>3.6 this详解</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">JavaScript中的this指向问题，有时候会让人难以捉摸，随着学习的深入，我们可以逐渐了解</span><br><span class="line">现在我们需要掌握函数内部的this几个特点</span><br><span class="line">    1. 函数在定义的时候this是不确定的，只有在调用的时候才可以确定</span><br><span class="line">    2. 一般函数直接执行，内部this指向全局window</span><br><span class="line">    3. 函数作为一个对象的方法，被该对象所调用，那么this指向的是该对象</span><br><span class="line">    4. 构造函数中的this其实是一个隐式对象，类似一个初始化的模型，所有方法和属性都挂载到了这个隐式对象身上，后续通过new关键字来调用，从而实现实例化</span><br></pre></td></tr></table></figure>
-<h1 id="十、什么是DOM"><a href="#十、什么是DOM" class="headerlink" title="十、什么是DOM"></a>十、什么是DOM</h1><h2 id="1、DOM的概念"><a href="#1、DOM的概念" class="headerlink" title="1、DOM的概念"></a>1、DOM的概念</h2><p>文档对象模型（Document Object Model，简称DOM），是<a href="https://baike.baidu.com/item/W3C" target="_blank" rel="noopener">W3C</a>组织推荐的处理<a href="https://baike.baidu.com/item/%E5%8F%AF%E6%89%A9%E5%B1%95%E7%BD%AE%E6%A0%87%E8%AF%AD%E8%A8%80" target="_blank" rel="noopener">可扩展标记语言</a>的标准<a href="https://baike.baidu.com/item/%E7%BC%96%E7%A8%8B%E6%8E%A5%E5%8F%A3" target="_blank" rel="noopener">编程接口</a>。它是一种与平台和语言无关的<a href="https://baike.baidu.com/item/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3" target="_blank" rel="noopener">应用程序接口</a>(API),它可以动态地访问程序和脚本，更新其内容、结构和<a href="https://baike.baidu.com/item/www/109924" target="_blank" rel="noopener">www</a>文档的风格(目前，HTML和XML文档是通过说明部分定义的)。文档可以进一步被处理，处理的结果可以加入到当前的页面。<a href="https://baike.baidu.com/item/DOM/50288" target="_blank" rel="noopener">DOM</a>是一种基于树的<a href="https://baike.baidu.com/item/API/10154" target="_blank" rel="noopener">API</a>文档，它要求在处理过程中整个文档都表示在<a href="https://baike.baidu.com/item/%E5%AD%98%E5%82%A8%E5%99%A8" target="_blank" rel="noopener">存储器</a>中。</p>
+<pre><code>new会在内存中创建一个新的空对象
+new 会让this指向这个新的对象
+执行构造函数  目的：给这个新对象加属性和方法
+new会返回这个新对象
+</code></pre><h2 id="3-6-this详解"><a href="#3-6-this详解" class="headerlink" title="3.6 this详解"></a>3.6 this详解</h2><pre><code>JavaScript中的this指向问题，有时候会让人难以捉摸，随着学习的深入，我们可以逐渐了解
+现在我们需要掌握函数内部的this几个特点
+    1. 函数在定义的时候this是不确定的，只有在调用的时候才可以确定
+    2. 一般函数直接执行，内部this指向全局window
+    3. 函数作为一个对象的方法，被该对象所调用，那么this指向的是该对象
+    4. 构造函数中的this其实是一个隐式对象，类似一个初始化的模型，所有方法和属性都挂载到了这个隐式对象身上，后续通过new关键字来调用，从而实现实例化
+</code></pre><h1 id="十、什么是DOM"><a href="#十、什么是DOM" class="headerlink" title="十、什么是DOM"></a>十、什么是DOM</h1><h2 id="1、DOM的概念"><a href="#1、DOM的概念" class="headerlink" title="1、DOM的概念"></a>1、DOM的概念</h2><p>文档对象模型（Document Object Model，简称DOM），是<a href="https://baike.baidu.com/item/W3C" target="_blank" rel="noopener">W3C</a>组织推荐的处理<a href="https://baike.baidu.com/item/%E5%8F%AF%E6%89%A9%E5%B1%95%E7%BD%AE%E6%A0%87%E8%AF%AD%E8%A8%80" target="_blank" rel="noopener">可扩展标记语言</a>的标准<a href="https://baike.baidu.com/item/%E7%BC%96%E7%A8%8B%E6%8E%A5%E5%8F%A3" target="_blank" rel="noopener">编程接口</a>。它是一种与平台和语言无关的<a href="https://baike.baidu.com/item/%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E6%8E%A5%E5%8F%A3" target="_blank" rel="noopener">应用程序接口</a>(API),它可以动态地访问程序和脚本，更新其内容、结构和<a href="https://baike.baidu.com/item/www/109924" target="_blank" rel="noopener">www</a>文档的风格(目前，HTML和XML文档是通过说明部分定义的)。文档可以进一步被处理，处理的结果可以加入到当前的页面。<a href="https://baike.baidu.com/item/DOM/50288" target="_blank" rel="noopener">DOM</a>是一种基于树的<a href="https://baike.baidu.com/item/API/10154" target="_blank" rel="noopener">API</a>文档，它要求在处理过程中整个文档都表示在<a href="https://baike.baidu.com/item/%E5%AD%98%E5%82%A8%E5%99%A8" target="_blank" rel="noopener">存储器</a>中。</p>
 <p>DOM又称为文档树模型</p>
 <p><img src="https://ws1.sinaimg.cn/large/006doHETly1g2lmv4zolaj30qx0ej0vu.jpg" alt=""></p>
 <ul>
@@ -722,8 +757,11 @@
 <h1 id="十二、属性操作"><a href="#十二、属性操作" class="headerlink" title="十二、属性操作"></a>十二、属性操作</h1><h2 id="1、属性基本操作"><a href="#1、属性基本操作" class="headerlink" title="1、属性基本操作"></a>1、属性基本操作</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> link = <span class="built_in">document</span>.getElementById(<span class="string">'link'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(link.href);</span><br><span class="line"><span class="built_in">console</span>.log(link.title);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> pic = <span class="built_in">document</span>.getElementById(<span class="string">'pic'</span>);</span><br><span class="line"><span class="built_in">console</span>.log(pic.src);</span><br></pre></td></tr></table></figure>
 <p><strong>案例：点击按钮显示隐藏div</strong>（作业）</p>
 <p>现在已经实现了div的隐藏，下面可以div的展示，注意按钮上的文字要变成 “显示”</p>
-<h2 id="2、innerHTML和innerText"><a href="#2、innerHTML和innerText" class="headerlink" title="2、innerHTML和innerText"></a>2、innerHTML和innerText</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">innerHTML  innerText</span><br><span class="line">获取开始标签和结束标签之间的内容</span><br><span class="line">innerHTML  获取内容的时候，如果内容中有标签，会把标签也获取到，原封不动把内容获取到</span><br><span class="line">innerText  获取内容的时候，如果内容中有标签，会把标签过滤掉</span><br></pre></td></tr></table></figure>
-<h1 id="十三、BOM"><a href="#十三、BOM" class="headerlink" title="十三、BOM"></a>十三、BOM</h1><h2 id="1、BOM的概念"><a href="#1、BOM的概念" class="headerlink" title="1、BOM的概念"></a>1、BOM的概念</h2><p>BOM(Browser Object Model) 是指浏览器对象模型，浏览器对象模型提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。BOM由多个对象组成，其中代表浏览器窗口的Window对象是BOM的顶层对象，其他对象都是该对象的子对象。</p>
+<h2 id="2、innerHTML和innerText"><a href="#2、innerHTML和innerText" class="headerlink" title="2、innerHTML和innerText"></a>2、innerHTML和innerText</h2><pre><code>innerHTML  innerText
+获取开始标签和结束标签之间的内容
+innerHTML  获取内容的时候，如果内容中有标签，会把标签也获取到，原封不动把内容获取到
+innerText  获取内容的时候，如果内容中有标签，会把标签过滤掉
+</code></pre><h1 id="十三、BOM"><a href="#十三、BOM" class="headerlink" title="十三、BOM"></a>十三、BOM</h1><h2 id="1、BOM的概念"><a href="#1、BOM的概念" class="headerlink" title="1、BOM的概念"></a>1、BOM的概念</h2><p>BOM(Browser Object Model) 是指浏览器对象模型，浏览器对象模型提供了独立于内容的、可以与浏览器窗口进行互动的对象结构。BOM由多个对象组成，其中代表浏览器窗口的Window对象是BOM的顶层对象，其他对象都是该对象的子对象。</p>
 <p>我们在浏览器中的一些操作都可以使用BOM的方式进行编程处理，</p>
 <p>比如：刷新浏览器、后退、前进、在浏览器中输入地址等</p>
 <h2 id="2、BOM的顶级对象window"><a href="#2、BOM的顶级对象window" class="headerlink" title="2、BOM的顶级对象window"></a>2、BOM的顶级对象window</h2><p>window是浏览器的顶级对象，当调用window下的属性和方法时，可以省略window。</p>
