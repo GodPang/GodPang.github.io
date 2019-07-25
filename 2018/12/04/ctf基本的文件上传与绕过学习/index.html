@@ -432,7 +432,7 @@
 <li>将原本不能上传的xx.php文件更名为xx.php.abc上传即可<br><img src="http://ww1.sinaimg.cn/large/006doHETly1fxv39b0llbj30f302ijrp.jpg" alt=""><h2 id="Fckeditor漏洞上传webshell"><a href="#Fckeditor漏洞上传webshell" class="headerlink" title="Fckeditor漏洞上传webshell"></a>Fckeditor漏洞上传webshell</h2><h3 id="原理：-6"><a href="#原理：-6" class="headerlink" title="原理："></a>原理：</h3>Fckeditor在2.4.2以下存在一个直接上传任意文件的上传页面，可直接上传webshell<h3 id="实验：-5"><a href="#实验：-5" class="headerlink" title="实验："></a>实验：</h3></li>
 <li>打开网站判断是否有fckeditor编辑器出现403禁止访问，说明此目录存在<br><img src="http://ww1.sinaimg.cn/large/006doHETly1fxv3hrtw2lj30f407v0v3.jpg" alt=""></li>
 <li>判断fckeditor编辑器版本号，输入：<a href="http://192.168.1.3:8001/FCKeditor/_whatsnew.html，由返回页面可知此fckeditor编辑器版本为2.0" target="_blank" rel="noopener">http://192.168.1.3:8001/FCKeditor/_whatsnew.html，由返回页面可知此fckeditor编辑器版本为2.0</a><br><img src="http://ww1.sinaimg.cn/large/006doHETly1fxv3iu0higj30jd0b5443.jpg" alt=""></li>
-<li>此版本fckeditor存在两个上传漏洞页面：<br><a href="p">FCKeditor/editor/filemanager/browser/default/browser.html?type=Image&amp;connector=connectors/asp/connector.as</a><br><a href="">FCKeditor/editor/filemanager/browser/default/connectors/asp/connector.asp?Command=GetFoldersAndFiles&amp;Type=zhang&amp;CurrentFolder=/</a><br>第一个页面是在网站根目录下的userfiles目录下的Image目录下打开一个上传页面，上传的文件都保存在这个目录下；<br>第二是在网站根目录下的userfiles目录下创建一个zhang目录。1.4打开<br><a href="http://192.168.1.3:8001/FCKeditor/editor/filemanager/browser/default/browser.html?type=Image&amp;connector=connectors/asp/connector.asp" target="_blank" rel="noopener">http://192.168.1.3:8001/FCKeditor/editor/filemanager/browser/default/browser.html?type=Image&amp;connector=connectors/asp/connector.asp</a><br><img src="http://ww1.sinaimg.cn/large/006doHETly1fxv3nyydhij30jl0bzq59.jpg" alt=""></li>
+<li>此版本fckeditor存在两个上传漏洞页面：<br><a href="/2018/12/04/ctf基本的文件上传与绕过学习/p">FCKeditor/editor/filemanager/browser/default/browser.html?type=Image&amp;connector=connectors/asp/connector.as</a><br><a href="">FCKeditor/editor/filemanager/browser/default/connectors/asp/connector.asp?Command=GetFoldersAndFiles&amp;Type=zhang&amp;CurrentFolder=/</a><br>第一个页面是在网站根目录下的userfiles目录下的Image目录下打开一个上传页面，上传的文件都保存在这个目录下；<br>第二是在网站根目录下的userfiles目录下创建一个zhang目录。1.4打开<br><a href="http://192.168.1.3:8001/FCKeditor/editor/filemanager/browser/default/browser.html?type=Image&amp;connector=connectors/asp/connector.asp" target="_blank" rel="noopener">http://192.168.1.3:8001/FCKeditor/editor/filemanager/browser/default/browser.html?type=Image&amp;connector=connectors/asp/connector.asp</a><br><img src="http://ww1.sinaimg.cn/large/006doHETly1fxv3nyydhij30jl0bzq59.jpg" alt=""></li>
 <li>00截断上传，先上传一个jpg类型文件，再上传一个asp文件报错。burp suite抓包进行00截断上传。<br><img src="http://ww1.sinaimg.cn/large/006doHETly1fxv3qrxel6j30jh0crae9.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006doHETly1fxv3r20yt8j30ji0cgadx.jpg" alt=""><br><img src="http://ww1.sinaimg.cn/large/006doHETly1fxv3rapl8kj30jh0cujw5.jpg" alt=""></li>
 <li>设置代理，再次上传类型为ASP的文件webshell.asp.jpg(把webshell.asp重命名webshell.asp.jpg即可)，击”upload”按钮<br><img src="http://ww1.sinaimg.cn/large/006doHETly1fxv3vl5am7j30jg0cwq5d.jpg" alt=""></li>
 <li>burpsuite 抓到包 进到hex选项卡更改00截断<br><img src="http://ww1.sinaimg.cn/large/006doHETly1fxv3szoovcj30jm0f5gyp.jpg" alt=""></li>
@@ -567,7 +567,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-count">19</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
